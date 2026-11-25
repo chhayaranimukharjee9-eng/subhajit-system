@@ -409,10 +409,35 @@ body{font-size:15px;font-weight:500}
 .rps{display:flex;gap:8px;justify-content:center}
 .rps button{flex:1;max-width:80px;min-height:44px;background:#0b1b3c;border:1px solid rgba(60,200,255,.5);color:#cde8ff;font:700 15px Rajdhani,sans-serif;border-radius:2px}
 .rps button:active{background:var(--pink)}
-.go{margin-top:12px;width:100%;min-height:46px;background:linear-gradient(90deg,var(--pink),var(--orange));border:0;color:#fff;font:700 15px Rajdhani,sans-serif;letter-spacing:.2em;border-radius:2px}
+.gobtn{margin-top:12px;width:100%;min-height:46px;background:linear-gradient(90deg,var(--pink),var(--orange));border:0;color:#fff;font:700 15px Rajdhani,sans-serif;letter-spacing:.2em;border-radius:2px}
+</style><style id="arise-adv4">
+.sq{width:100%;box-sizing:border-box;margin:12px 0 0;min-height:44px;padding:0 14px;background:#07122b;border:1px solid rgba(60,200,255,.35);border-radius:2px;color:#e6f4ff;font:600 15px Rajdhani,'Hind Siliguri',sans-serif;letter-spacing:.06em;outline:none}
+.sq:focus{border-color:var(--pink);box-shadow:0 0 0 2px rgba(255,60,157,.25)}
+.sqn{font:700 11px Rajdhani,sans-serif;letter-spacing:.2em;color:#ffd9a0;margin:6px 2px 0;min-height:14px}
+.sx{display:none!important}
+#mods.srch .mod .list{display:block}
+.dq{margin-top:8px}
+.dqh{display:flex;justify-content:space-between;font:700 11px Rajdhani,sans-serif;letter-spacing:.18em;color:#ffd9a0;margin-bottom:6px}
+.dqr{display:flex;align-items:center;gap:10px;width:100%;box-sizing:border-box;min-height:46px;margin-bottom:6px;padding:8px 12px;text-align:left;background:#07122b;border:1px solid rgba(255,60,157,.4);border-left:3px solid var(--pink);color:#e6f4ff;font:700 15px Rajdhani,sans-serif;border-radius:2px}
+.dqr i{flex:none;width:20px;height:20px;border:2px solid #4d6ea8;border-radius:2px;display:grid;place-items:center;font-style:normal;font-size:13px;color:transparent}
+.dqr span{flex:1}.dqr em{font-style:normal;font-size:11px;letter-spacing:.14em;color:#8fe6ff}
+.dqr.ok{border-color:rgba(255,211,107,.6);border-left-color:#ffd36b;background:rgba(255,211,107,.06)}
+.dqr.ok i{background:linear-gradient(135deg,#ffd36b,var(--pink));border-color:transparent;color:#2a0420}
+.dqr.ok span{text-decoration:line-through;text-decoration-color:#ffd36b;color:#ffd36b}
+.dqt{font:700 12px Rajdhani,sans-serif;letter-spacing:.1em;color:#9fc4ff;margin-top:2px}
+.fl3{animation:fl3 1.4s}@keyframes fl3{0%,100%{box-shadow:none}30%{box-shadow:inset 0 0 0 2px var(--pink),0 0 18px var(--pink)}}
+#bl{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.6);display:flex;align-items:flex-end}
+#bl[hidden]{display:none}
+.rp2 .cl{position:absolute;right:12px;top:10px;width:40px;height:40px;background:none;border:0;color:#9fc4ff;font-size:20px}
+#bls{width:100%;height:96px;margin:14px 0 4px;background:#050d22;border:1px solid rgba(60,200,255,.2)}
+#bls polyline{fill:none;stroke:var(--pink);stroke-width:2;vector-effect:non-scaling-stroke}
+#bls circle{fill:#ffd36b}
+.bli{font:700 13px Rajdhani,sans-serif;letter-spacing:.1em;color:#cde8ff;margin-bottom:10px}
+.blr{display:flex;gap:8px}.blr input{flex:1;min-width:0;min-height:46px;padding:0 12px;background:#0b1b3c;border:1px solid rgba(60,200,255,.5);color:#fff;font:700 16px Rajdhani,sans-serif;border-radius:2px}
+.blr .gobtn{margin-top:0;flex:1}
 </style></head><body>
 <div id="cut" hidden aria-hidden="true"><div class="nmx"><i class="fl2"></i><small>PLAYER</small><h3 data-t="SUBHAJIT">SUBHAJIT</h3><span>THE HUNTER AWAKENS</span><i class="swp"></i></div><div class="cs" id="cs">
-<svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+<svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
 <defs><radialGradient id="gv"><stop offset="0" stop-color="#8a5cff" stop-opacity=".75"/><stop offset="1" stop-color="#8a5cff" stop-opacity="0"/></radialGradient>
 <radialGradient id="gc"><stop offset="0" stop-color="#3cc8ff" stop-opacity=".75"/><stop offset="1" stop-color="#3cc8ff" stop-opacity="0"/></radialGradient>
 <radialGradient id="go"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#ff9ad0"/><stop offset="1" stop-color="#ff3c9d" stop-opacity="0"/></radialGradient>
@@ -432,10 +457,12 @@ body{font-size:15px;font-weight:500}
 <circle class="rg" cx="203" cy="140" r="14"/><circle class="rg r2" cx="203" cy="140" r="14"/>
 </svg><div class="fl"></div>
 <div class="tx t1">SHADOW</div><div class="tx t2">LIGHT</div><div class="tx t3">ARISE</div><div class="tx t4">COMBAT OS</div>
-<video id="cv" muted playsinline hidden></video></div><button class="sk" id="skip" type="button">SKIP ›</button><button id="snd" type="button"></button></div><div id="rt" hidden><div class="rp2"><button id="rtx" type="button" aria-label="Close">✕</button><div class="rl">REST TIMER</div>
+<video id="cv" muted playsinline hidden></video></div><button class="sk" id="skip" type="button">SKIP ›</button><button id="snd" type="button"></button></div><div id="bl" hidden><div class="rp2"><button class="cl" id="blx" type="button" aria-label="Close">✕</button><div class="rl">BODY LOG</div>
+<svg id="bls" viewBox="0 0 200 74" preserveAspectRatio="none"></svg><div class="bli" id="bli">No entries yet</div>
+<div class="blr"><input id="blv" type="number" inputmode="decimal" step="0.1" min="20" max="300" placeholder="Weight (kg)"><button id="bls2" class="gobtn" type="button">SAVE TODAY</button></div></div></div><div id="rt" hidden><div class="rp2"><button id="rtx" type="button" aria-label="Close">✕</button><div class="rl">REST TIMER</div>
 <div class="rr"><svg viewBox="0 0 120 120"><circle class="b" cx="60" cy="60" r="52"/><circle class="f" id="rtc" cx="60" cy="60" r="52"/></svg><b id="rtt">00:00</b></div>
 <div class="rps"><button type="button" data-s="30">30s</button><button type="button" data-s="45">45s</button><button type="button" data-s="60">60s</button><button type="button" data-s="90">90s</button></div>
-<button id="rts" class="go" type="button">STOP</button></div></div><div id="splash"><div><h2>ARISE</h2><p>[ TAP TO ENTER ]</p></div></div><div id="lvup"></div><canvas id="cf"></canvas>
+<button id="rts" class="gobtn" type="button">STOP</button></div></div><div id="splash"><div><h2>ARISE</h2><p>[ TAP TO ENTER ]</p></div></div><div id="lvup"></div><canvas id="cf"></canvas>
 
 <div class="wrap">
   <header class="bar">
@@ -466,13 +493,15 @@ body{font-size:15px;font-weight:500}
 
   <div class="sys" id="sys"></div>
   <div class="streak"><div>DAY STREAK<b id="stk">1</b></div><div>TODAY<b id="tdy">0%</b></div></div>
+  <div class="qh">DAILY QUEST</div><div class="dq" id="dq"></div>
   <div class="qh">ACHIEVEMENTS</div><div class="bds" id="bds"><div class="bd" data-n="1"><svg viewBox="0 0 60 68"><polygon points="30,2 56,17 56,51 30,66 4,51 4,17"/></svg><b>1</b><small>FIRST STEP</small></div><div class="bd" data-n="10"><svg viewBox="0 0 60 68"><polygon points="30,2 56,17 56,51 30,66 4,51 4,17"/></svg><b>10</b><small>WARRIOR</small></div><div class="bd" data-n="25"><svg viewBox="0 0 60 68"><polygon points="30,2 56,17 56,51 30,66 4,51 4,17"/></svg><b>25</b><small>ELITE</small></div><div class="bd" data-n="50"><svg viewBox="0 0 60 68"><polygon points="30,2 56,17 56,51 30,66 4,51 4,17"/></svg><b>50</b><small>MASTER</small></div><div class="bd" data-n="92"><svg viewBox="0 0 60 68"><polygon points="30,2 56,17 56,51 30,66 4,51 4,17"/></svg><b>92</b><small>MONARCH</small></div></div>
   <div class="qh">WEEKLY LOG</div><div class="wk" id="wk"></div>
   <div class="qh">QUEST LOG</div>
+  <input class="sq" id="sq" type="search" placeholder="🔍 SEARCH SKILLS · English / বাংলা" autocomplete="off"><div class="sqn" id="sqn"></div>
   <nav class="tabs" id="tabs" aria-label="Filter"></nav>
   <div class="mods" id="mods"></div>
 
-  <div class="tools" id="tools"><button class="cutbtn" id="rtb" type="button">⏱ REST TIMER</button><button class="cutbtn" id="awk" type="button">🔆 STAY AWAKE</button><button class="cutbtn" id="shr" type="button">📤 SHARE</button><button class="cutbtn" id="ins" type="button" hidden>⬇ INSTALL</button></div>
+  <div class="tools" id="tools"><button class="cutbtn" id="rtb" type="button">⏱ REST TIMER</button><button class="cutbtn" id="awk" type="button">🔆 STAY AWAKE</button><button class="cutbtn" id="shr" type="button">📤 SHARE</button><button class="cutbtn" id="blb" type="button">⚖ BODY LOG</button><button class="cutbtn" id="bkp" type="button">💾 BACKUP</button><button class="cutbtn" id="rst" type="button">📥 RESTORE</button><input id="rsf" type="file" accept="application/json,.json" hidden><button class="cutbtn" id="ins" type="button" hidden>⬇ INSTALL</button></div>
   <div class="foot"><span>[ SYSTEM LOG: 92 / 92 SYNCED ]</span><button class="cutbtn" id="sndbtn" type="button">🔊 SOUND ON</button><button class="cutbtn" id="cutbtn" type="button">▶ INTRO</button><button class="reset" id="reset" type="button">RESET</button></div>
 </div>
 
@@ -785,6 +814,65 @@ else if(navigator.clipboard)navigator.clipboard.writeText(t+" "+location.href).t
 var dp=null;addEventListener("beforeinstallprompt",function(e){e.preventDefault();dp=e;$("ins").hidden=false});
 $("ins").addEventListener("click",function(){if(!dp)return;dp.prompt();dp.userChoice.finally(function(){dp=null;$("ins").hidden=true})});
 addEventListener("appinstalled",function(){$("ins").hidden=true});
+})();
+</script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},pad=function(n){return n<10?"0"+n:""+n};
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function sfx(n){window.ariseSfx&&window.ariseSfx[n]&&window.ariseSfx[n]()}
+function key(d){return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
+var today=key(new Date()),sd=$("sDone"),mods=$("mods");
+function ex(n){return mods.querySelector('.ex[data-n="'+n+'"]')}
+function nm(li){var e=li.querySelector(".en");return e?e.textContent.replace(/^\d+\.\s*/,""):""}
+/* 1) daily quest: 3 skills picked per day */
+var Q=null;try{Q=JSON.parse(ls("arise_dq")||"null")}catch(e){Q=null}
+function hash(t){var h=2166136261;for(var i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+function mk(){var all=[].slice.call(mods.querySelectorAll(".ex")),pool=all.filter(function(l){return !l.classList.contains("done")}).map(function(l){return +l.dataset.n}),r=hash(today),ids=[];
+while(ids.length<3&&pool.length){r=Math.imul(r,1664525)+1013904223>>>0;ids.push(pool.splice(r%pool.length,1)[0])}
+Q={d:today,ids:ids,paid:false};ls("arise_dq",JSON.stringify(Q))}
+if(!Q||Q.d!==today)mk();
+var dq=$("dq"),bn=$("lvup");
+function drawQ(){var h="",c=0;Q.ids.forEach(function(n){var li=ex(n);if(!li)return;var ok=li.classList.contains("done");if(ok)c++;h+='<button type="button" class="dqr'+(ok?' ok':'')+'" data-n="'+n+'"><i>✔</i><span>'+nm(li)+'</span><em>GO ›</em></button>'});
+if(!Q.ids.length)h='<div class="dqt">ALL SKILLS CLEARED. LEGEND!</div>';
+dq.innerHTML='<div class="dqh"><span>CLEAR ALL 3 TODAY</span><span>'+c+' / '+Q.ids.length+'</span></div>'+h;
+if(Q.ids.length&&c===Q.ids.length&&!Q.paid&&ready){Q.paid=true;ls("arise_dq",JSON.stringify(Q));say("DAILY QUEST CLEARED","RESPECT +")}
+else if(c===Q.ids.length&&Q.ids.length&&!Q.paid){Q.paid=true;ls("arise_dq",JSON.stringify(Q))}}
+var ready=0;setTimeout(function(){ready=1},2500);
+function say(a,b){bn.innerHTML=a+"<small>"+b+"</small>";bn.classList.add("on");sfx("pass");if(navigator.vibrate)navigator.vibrate([30,30,70]);setTimeout(function(){bn.classList.remove("on")},2300)}
+dq.addEventListener("click",function(e){var b=e.target.closest(".dqr");if(!b)return;var li=ex(+b.dataset.n);if(!li)return;var sec=li.closest(".mod");
+if(sec.hidden){var all=document.querySelector(".tab");if(all)all.click()}
+if(!sec.classList.contains("open"))sec.querySelector(".mh").click();
+setTimeout(function(){li.scrollIntoView({behavior:"smooth",block:"center"});li.classList.remove("fl3");void li.offsetWidth;li.classList.add("fl3")},60)});
+new MutationObserver(drawQ).observe(sd,{childList:true,characterData:true,subtree:true});drawQ();
+/* 2) search */
+var sq=$("sq"),sn=$("sqn");
+sq.addEventListener("input",function(){var q=sq.value.trim().toLowerCase(),f=0;mods.classList.toggle("srch",!!q);
+mods.querySelectorAll(".ex").forEach(function(li){var hit=!q||li.textContent.toLowerCase().indexOf(q)>-1;li.classList.toggle("sx",!hit);if(hit&&q)f++});
+mods.querySelectorAll(".mod").forEach(function(m){var any=!q||m.querySelector(".ex:not(.sx)");m.classList.toggle("sx",!any)});
+sn.textContent=q?(f?f+" SKILL"+(f>1?"S":"")+" FOUND":"NOTHING FOUND"):""});
+/* 3) body log */
+var W={};try{W=JSON.parse(ls("arise_weight")||"{}")||{}}catch(e){W={}}
+var bl=$("bl");
+function bdraw(){var ks=Object.keys(W).sort((a,b)=>new Date(a)-new Date(b)).slice(-12),v=ks.map(function(k){return W[k]}),svg=$("bls"),i=$("bli");
+if(!v.length){svg.innerHTML="";i.textContent="No entries yet";return}
+var mn=Math.min.apply(0,v),mx=Math.max.apply(0,v),sp=Math.max(.5,mx-mn),pts=v.map(function(y,j){return[v.length>1?j/(v.length-1)*180+10:100,60-(y-mn)/sp*46]});
+svg.innerHTML='<polyline points="'+pts.map(function(p){return p[0].toFixed(1)+","+p[1].toFixed(1)}).join(" ")+'"/>'+pts.map(function(p){return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="3"/>'}).join("");
+var last=v[v.length-1],d=v.length>1?last-v[0]:0;i.textContent="LATEST "+last+" kg · "+(v.length>1?("CHANGE "+(d>0?"+":"")+d.toFixed(1)+" kg over "+v.length+" entries"):"first entry saved")}
+$("blb").addEventListener("click",function(){bl.hidden=false;bdraw()});
+$("blx").addEventListener("click",function(){bl.hidden=true});
+bl.addEventListener("click",function(e){if(e.target===bl)bl.hidden=true});
+$("bls2").addEventListener("click",function(){var x=parseFloat($("blv").value);if(!(x>=20&&x<=300)){$("bli").textContent="Enter weight between 20 and 300 kg";return}
+W[today]=Math.round(x*10)/10;var ks=Object.keys(W).sort((a,b)=>new Date(a)-new Date(b)).slice(-60),o={};ks.forEach(function(k){o[k]=W[k]});W=o;ls("arise_weight",JSON.stringify(W));$("blv").value="";sfx("chime");bdraw()});
+/* 4) backup / restore */
+$("bkp").addEventListener("click",function(){var o={app:"arise",v:1,t:Date.now(),data:{}};try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k==="combatos-done-v1"||k.indexOf("arise_")===0)o.data[k]=localStorage.getItem(k)}}catch(e){}
+var txt=JSON.stringify(o),f=new File([txt],"arise-backup-"+today+".json",{type:"application/json"});
+function dl(){var a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();URL.revokeObjectURL(a.href)},800)}
+if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:"Arise backup"}).catch(dl);else dl();
+$("bkp").textContent="✔ SAVED";setTimeout(function(){$("bkp").textContent="💾 BACKUP"},1800)});
+$("rst").addEventListener("click",function(){$("rsf").click()});
+$("rsf").addEventListener("change",function(){var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var o=JSON.parse(r.result);if(o.app!=="arise"||!o.data)throw 0;
+if(!confirm("Restore this backup? Current progress will be replaced."))return;Object.keys(o.data).forEach(function(k){if(k==="combatos-done-v1"||k.indexOf("arise_")===0)ls(k,String(o.data[k]))});location.reload()}catch(e){$("rst").textContent="✖ INVALID FILE";setTimeout(function(){$("rst").textContent="📥 RESTORE"},2000)}};r.readAsText(f);this.value=""});
 })();
 </script>
 </body></html>
