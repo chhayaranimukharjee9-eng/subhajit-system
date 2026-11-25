@@ -476,7 +476,71 @@ body{font-size:15px;font-weight:500}
 .stt div{padding:10px 12px;background:#07122b;border:1px solid rgba(60,200,255,.22);border-radius:2px;font:700 11px Rajdhani,sans-serif;letter-spacing:.14em;color:#9fc4ff}
 .stt b{display:block;font:400 20px Bungee,Orbitron,sans-serif;letter-spacing:.02em;color:#fff;margin-top:2px}
 .stt .ttl{grid-column:1/3;border-color:rgba(255,211,107,.5)}.stt .ttl b{color:#ffd36b;font-size:18px}
-</style></head><body>
+</style><style id="arise-hub">
+.coin{display:flex;align-items:center;gap:10px;margin-top:8px;padding:10px 12px;background:#07122b;border:1px solid rgba(255,211,107,.4);border-radius:2px;font:700 13px Rajdhani,sans-serif;letter-spacing:.12em;color:#ffd9a0}
+#avb{font-size:26px;line-height:1}.coin .cn b{font:400 18px Bungee,Orbitron,sans-serif;color:#ffd36b;margin:0 2px}.coin .cw{margin-left:auto;color:#9fc4ff;text-align:right;font-size:11px}
+.hubg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.hubg button{min-height:74px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(160deg,#0e2150,#07122b);border:1px solid rgba(60,200,255,.3);border-radius:2px;color:#e6f4ff;font:700 11px Rajdhani,sans-serif;letter-spacing:.12em;padding:6px 2px}
+.hubg button span{font-size:24px;line-height:1}.hubg button:active{background:var(--pink)}.hubg button.on{border-color:var(--pink);box-shadow:0 0 10px rgba(255,60,157,.5)}
+#hub{position:fixed;inset:0;z-index:93;background:#030814;overflow-y:auto;-webkit-overflow-scrolling:touch}
+#hub[hidden]{display:none}.hp2b,#hub .hp2{position:relative;padding:54px 16px calc(28px + env(safe-area-inset-bottom,0px));box-sizing:border-box;max-width:560px;margin:0 auto}
+#hbt{text-align:center;margin-bottom:12px}
+.hr{display:flex;align-items:center;gap:10px;padding:10px 12px;margin-bottom:6px;background:#07122b;border:1px solid rgba(60,200,255,.22);border-radius:2px;font:700 14px Rajdhani,sans-serif;color:#e6f4ff;letter-spacing:.06em}
+.hr .gp{flex:1;min-width:0}.hr small{display:block;color:#7f98c4;font-size:11px;letter-spacing:.12em}
+.hb{min-height:40px;padding:0 14px;background:linear-gradient(90deg,var(--pink),var(--orange));border:0;color:#fff;font:700 13px Rajdhani,sans-serif;letter-spacing:.12em;border-radius:2px}
+.hb.g{background:#0b1b3c;border:1px solid rgba(60,200,255,.5);color:#cde8ff}.hb.dim{opacity:.45}.hb.on{background:#1d5a3a;color:#caff6b}
+.hsec{font:800 11px Bungee,Orbitron,sans-serif;letter-spacing:.25em;color:#c6b3ff;margin:16px 0 8px}
+.hin{width:100%;box-sizing:border-box;min-height:46px;padding:8px 12px;background:#0b1b3c;border:1px solid rgba(60,200,255,.5);color:#fff;font:700 16px Rajdhani,'Hind Siliguri',sans-serif;border-radius:2px}
+textarea.hin{min-height:140px;resize:vertical}
+.avs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:10px 0}.avs button{aspect-ratio:1;font-size:24px;background:#07122b;border:1px solid rgba(60,200,255,.25);border-radius:2px}.avs button.sel{border-color:var(--pink);box-shadow:0 0 10px var(--pink)}
+.tre{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.tre h4{margin:0 0 8px;text-align:center;font:800 12px Bungee,Orbitron,sans-serif;letter-spacing:.2em;color:#ffd9a0}
+.tn{position:relative;display:block;width:100%;margin:0 0 18px;padding:10px 4px;text-align:center;background:#07122b;border:1px solid #243a66;border-radius:2px;color:#5d7396;font:700 11px Rajdhani,sans-serif;letter-spacing:.08em}
+.tn::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:18px;background:#243a66}.tre>div>.tn:last-child::after{display:none}
+.tn b{display:block;font:400 15px Bungee,Orbitron,sans-serif;margin-top:2px}.tn.act{color:#cde8ff;border-color:var(--cyan)}.tn.act::after{background:var(--cyan)}
+.tn.max{color:#ffd36b;border-color:#ffd36b;background:linear-gradient(160deg,rgba(255,60,157,.18),#07122b);box-shadow:0 0 12px rgba(255,211,107,.4)}.tn.max::after{background:#ffd36b}
+.gar{position:relative;height:300px;margin:10px 0;background:radial-gradient(circle at 50% 50%,#1a0a3a,#050d22);border:1px solid rgba(138,92,255,.5);overflow:hidden;touch-action:manipulation}
+.gtg{position:absolute;width:58px;height:62px;padding:0;border:0;background:linear-gradient(135deg,#8fe6ff,#8a5cff);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);font-size:22px}
+.gtg.bad{background:linear-gradient(135deg,#ff9aa5,#ff465a)}
+.gst{display:flex;justify-content:space-between;font:700 14px Rajdhani,sans-serif;letter-spacing:.14em;color:#ffd9a0}
+.dys{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:10px}.dys button{min-height:48px;background:#07122b;border:1px solid rgba(60,200,255,.25);color:#9fc4ff;font:700 12px Rajdhani,sans-serif;border-radius:2px}.dys button.sel{background:linear-gradient(90deg,var(--pink),var(--orange));color:#fff;border-color:transparent}.dys button b{display:block;font-size:11px;color:#ffd36b}
+.stp{display:flex;align-items:center;gap:6px}.stp button{width:30px;height:30px;background:#0b1b3c;border:1px solid rgba(60,200,255,.5);color:#fff;border-radius:2px;font:700 16px Rajdhani,sans-serif}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.cg div{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:#0a1630;border:1px solid rgba(60,200,255,.12);border-radius:2px;font:700 12px Rajdhani,sans-serif;color:#7f98c4}
+.cg .w{background:none;border:0;color:#9fc4ff;aspect-ratio:auto;font-size:11px}.cg .h1{background:#1d4fae;color:#fff}.cg .h2{background:#8a5cff;color:#fff}.cg .h3{background:linear-gradient(135deg,#ffd36b,#ff3c9d);color:#2a0420}.cg .tdy{outline:2px solid #fff}
+.cmn{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;font:800 14px Bungee,Orbitron,sans-serif;letter-spacing:.1em;color:#ffd9a0}
+.pl{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.pl button{min-height:38px;padding:0 12px;background:#07122b;border:1px solid rgba(60,200,255,.3);color:#9fc4ff;font:700 12px Rajdhani,sans-serif;letter-spacing:.1em;border-radius:2px}.pl button.sel{background:linear-gradient(90deg,var(--pink),var(--orange));color:#fff;border-color:transparent}
+.sp{width:100%;height:90px;background:#050d22;border:1px solid rgba(60,200,255,.2);margin:6px 0}.sp polyline{fill:none;stroke:var(--pink);stroke-width:2;vector-effect:non-scaling-stroke}.sp circle{fill:#ffd36b}
+.nt{flex:none;width:30px;height:34px;background:none;border:0;color:#5d7396;font-size:17px;padding:0;-webkit-tap-highlight-color:transparent}.nt.has{color:#8fe6ff;text-shadow:0 0 8px #3cc8ff}
+.ex .fav{width:30px;margin:0}
+#ct{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:96;padding:8px 14px;background:#07122b;border:1px solid #ffd36b;color:#ffd36b;font:700 13px Rajdhani,sans-serif;letter-spacing:.14em;border-radius:99px;opacity:0;pointer-events:none;transition:opacity .3s}#ct.on{opacity:1}
+#lu{position:fixed;inset:0;z-index:997;background:radial-gradient(circle at 50% 45%,#2a0a46,#030814 70%);display:grid;place-items:center;overflow:hidden}
+#lu[hidden]{display:none}body.lu #lvup{display:none!important}
+.rays{position:absolute;left:50%;top:45%;width:200vmax;height:200vmax;margin:-100vmax 0 0 -100vmax;background:repeating-conic-gradient(rgba(255,211,107,.16) 0 7deg,transparent 7deg 18deg);animation:lur 7s linear both;-webkit-mask-image:radial-gradient(circle,#000 0,transparent 30%);mask-image:radial-gradient(circle,#000 0,transparent 30%)}
+@keyframes lur{to{transform:rotate(90deg)}}
+.lut{position:relative;text-align:center;animation:lup .9s cubic-bezier(.2,1.4,.3,1) both}.lut small{display:block;font:400 clamp(26px,9vw,46px) Bungee,Orbitron,sans-serif;letter-spacing:.14em;color:#fff;text-shadow:0 0 24px #ff3c9d,0 4px 0 #000}
+.lut b{display:block;font:400 clamp(70px,28vw,150px) Bungee,Orbitron,sans-serif;line-height:1.05;background:linear-gradient(180deg,#fff7c9,#ffd36b 55%,#ff9a3c);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 0 #000) drop-shadow(0 0 30px rgba(255,60,157,.9))}
+.lut span{display:block;margin-top:6px;font:700 15px Rajdhani,sans-serif;letter-spacing:.4em;color:#8fe6ff}
+@keyframes lup{from{opacity:0;transform:scale(2.6)}to{opacity:1;transform:none}}
+/* shop themes & auras */
+body[data-th="cyber"]{--pink:#19d3ff;--orange:#4d7cff}body[data-th="blood"]{--pink:#ff2a3a;--orange:#ff7a00}body[data-th="emerald"]{--pink:#2effa0;--orange:#a6e22e}
+body[data-th="cyber"] .hero{background:linear-gradient(180deg,#020a24 0%,#06265e 36%,#0a5fb0 60%,#1aa6ff 82%,#9be7ff 100%)}
+body[data-th="blood"] .hero{background:linear-gradient(180deg,#080000 0%,#3b0505 34%,#8a0f0f 58%,#d9381e 80%,#ff9a3c 100%)}
+body[data-th="emerald"] .hero{background:linear-gradient(180deg,#011a14 0%,#05402f 34%,#0b7a52 58%,#1fc283 80%,#c8ffb0 100%)}
+body[data-th="cyber"] #sg stop:nth-child(1){stop-color:#fff}body[data-th="cyber"] #sg stop:nth-child(2){stop-color:#7ee8ff}body[data-th="cyber"] #sg stop:nth-child(3){stop-color:#3a8dff}
+body[data-th="blood"] #sg stop:nth-child(1){stop-color:#fff3c4}body[data-th="blood"] #sg stop:nth-child(2){stop-color:#ff5a2a}body[data-th="blood"] #sg stop:nth-child(3){stop-color:#8a0f0f}
+body[data-th="emerald"] #sg stop:nth-child(1){stop-color:#fff}body[data-th="emerald"] #sg stop:nth-child(2){stop-color:#9bffcf}body[data-th="emerald"] #sg stop:nth-child(3){stop-color:#19c37d}
+body[data-th="cyber"] .scene .l1>rect{fill:#0b2a55}body[data-th="cyber"] .scene .l2>rect:not([width="2.4"]){fill:#050f24}
+body[data-th="blood"] .scene .l1>rect{fill:#2a0505}body[data-th="blood"] .scene .l2>rect:not([width="2.4"]){fill:#120000}
+body[data-th="emerald"] .scene .l1>rect{fill:#06382a}body[data-th="emerald"] .scene .l2>rect:not([width="2.4"]){fill:#021510}
+body[data-th="cyber"] .title h1{background:linear-gradient(180deg,#fff,#d9f6ff 40%,#7ee8ff 58%,#9bb8ff);-webkit-background-clip:text;background-clip:text}
+body[data-th="blood"] .title h1{background:linear-gradient(180deg,#fff,#ffe1d6 40%,#ff8a6a 58%,#ffb066);-webkit-background-clip:text;background-clip:text}
+body[data-th="emerald"] .title h1{background:linear-gradient(180deg,#fff,#e6fff3 40%,#8dffc9 58%,#c8ffb0);-webkit-background-clip:text;background-clip:text}
+body[data-th="cyber"] .flare{background:radial-gradient(circle,rgba(126,232,255,.5),rgba(58,141,255,.22) 35%,transparent 68%)}
+body[data-th="blood"] .flare{background:radial-gradient(circle,rgba(255,150,80,.5),rgba(255,42,58,.25) 35%,transparent 68%)}
+body[data-th="emerald"] .flare{background:radial-gradient(circle,rgba(155,255,207,.5),rgba(25,195,125,.22) 35%,transparent 68%)}
+body[data-au="gold"]{--auc:#ffd36b}body[data-au="violet"]{--auc:#b79bff}body[data-au="fire"]{--auc:#ff6a2a}
+body[data-au] .aura i:nth-child(1){border:2px solid var(--auc);box-shadow:0 0 18px var(--auc)}body[data-au] .aura i:nth-child(2){border-color:var(--auc)}
+body[data-au] .emb{filter:drop-shadow(0 0 14px var(--auc))}
+</style><style id="arise-hub2">#hub .cl{position:absolute;right:12px;top:10px;width:44px;height:44px;background:none;border:0;color:#9fc4ff;font-size:22px}#hbt{font:800 14px Bungee,Orbitron,sans-serif;letter-spacing:.25em;color:#c6b3ff}</style></head><body>
 <div id="cut" hidden aria-hidden="true"><div class="nmx"><i class="fl2"></i><small>PLAYER</small><h3 data-t="SUBHAJIT">SUBHAJIT</h3><span>THE HUNTER AWAKENS</span><i class="swp"></i></div><div class="cs" id="cs">
 <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
 <defs><radialGradient id="gv"><stop offset="0" stop-color="#8a5cff" stop-opacity=".75"/><stop offset="1" stop-color="#8a5cff" stop-opacity="0"/></radialGradient>
@@ -503,7 +567,8 @@ body{font-size:15px;font-weight:500}
 <div class="rr"><svg viewBox="0 0 120 120"><circle class="b" cx="60" cy="60" r="52"/><circle class="f" id="wsc" cx="60" cy="60" r="52"/></svg><b id="wst">00:00</b></div>
 <a class="wsl" id="wsl" target="_blank" rel="noopener noreferrer">▶ HINDI VIDEO</a>
 <div class="rps" id="wsh"><button type="button" data-h="30">30s</button><button type="button" data-h="45">45s</button><button type="button" data-h="60">60s</button></div>
-<div class="wsr"><button class="gobtn" id="wsd" type="button">DONE ✔</button><button class="cutbtn" id="wsq" type="button">PAUSE</button><button class="cutbtn" id="wss" type="button">SKIP ›</button></div></div></div><div id="bl" hidden><div class="rp2"><button class="cl" id="blx" type="button" aria-label="Close">✕</button><div class="rl">BODY LOG</div>
+<div class="wsr"><button class="gobtn" id="wsd" type="button">DONE ✔</button><button class="cutbtn" id="wsq" type="button">PAUSE</button><button class="cutbtn" id="wss" type="button">SKIP ›</button></div></div></div><div id="hub" hidden><div class="hp2"><button class="cl" id="hbx" type="button" aria-label="Close">✕</button><div class="rl" id="hbt"></div><div id="hbb"></div></div></div>
+<div id="lu" hidden><div class="rays"></div><div class="lut"><small id="lus"></small><b id="lub"></b><span id="lun"></span></div></div><div id="bl" hidden><div class="rp2"><button class="cl" id="blx" type="button" aria-label="Close">✕</button><div class="rl">BODY LOG</div>
 <svg id="bls" viewBox="0 0 200 74" preserveAspectRatio="none"></svg><div class="bli" id="bli">No entries yet</div>
 <div class="blr"><input id="blv" type="number" inputmode="decimal" step="0.1" min="20" max="300" placeholder="Weight (kg)"><button id="bls2" class="gobtn" type="button">SAVE TODAY</button></div></div></div><div id="rt" hidden><div class="rp2"><button id="rtx" type="button" aria-label="Close">✕</button><div class="rl">REST TIMER</div>
 <div class="rr"><svg viewBox="0 0 120 120"><circle class="b" cx="60" cy="60" r="52"/><circle class="f" id="rtc" cx="60" cy="60" r="52"/></svg><b id="rtt">00:00</b></div>
@@ -539,6 +604,7 @@ body{font-size:15px;font-weight:500}
 
   <div class="sys" id="sys"></div>
   <div class="streak"><div>DAY STREAK<b id="stk">1</b></div><div>TODAY<b id="tdy">0%</b></div></div>
+  <div class="qh">HUNTER HUB</div><div class="coin"><span id="avb">🥷</span><span class="cn">🪙 <b id="coins">0</b> COINS</span><span class="cw" id="coinw"></span></div><div class="hubg" id="hubg"></div>
   <div class="qh">DAILY QUEST</div><div class="dq" id="dq"></div>
   <div class="ssb"><button class="cutbtn" id="ssq" type="button">▶ QUEST SESSION</button><button class="cutbtn" id="ssn" type="button">▶ NEXT 5 SKILLS</button></div>
   <div class="qh">WEEKLY BOSS</div><div class="boss" id="boss"></div>
@@ -834,7 +900,7 @@ var B={};try{B=JSON.parse(ls("arise_base")||"{}")||{}}catch(e){B={}}
 var today=key(new Date());
 function track(){var c=done();if(B.d!==today||c<B.b){B={d:today,b:(B.d===today&&c<B.b)?c:c};if(B.d===today&&H[today]!=null&&c>=0){/* keep earlier gain */}ls("arise_base",JSON.stringify(B))}
 var g=Math.max(0,c-B.b);if(!(H[today]>g))H[today]=g;
-var ks=Object.keys(H).sort().slice(-30),o={};ks.forEach(function(k){o[k]=H[k]});H=o;ls("arise_hist",JSON.stringify(H));draw()}
+var ks=Object.keys(H).sort().slice(-400),o={};ks.forEach(function(k){o[k]=H[k]});H=o;ls("arise_hist",JSON.stringify(H));draw()}
 function draw(){var el=$("wk"),h="",mx=1,days=[],L="SMTWTFS";
 for(var i=6;i>=0;i--){var d=new Date();d.setDate(d.getDate()-i);var v=H[key(d)]||0;days.push([L[d.getDay()],v,i==0]);if(v>mx)mx=v}
 days.forEach(function(x){h+='<div'+(x[2]?' class="td"':'')+'><b>'+x[1]+'</b><i style="height:'+Math.max(3,x[1]/mx*58)+'px"></i>'+x[0]+'</div>'});el.innerHTML=h}
@@ -955,7 +1021,7 @@ function fin(){clearInterval(S.iv);ws.hidden=true;var n=S.q.length;setTimeout(fu
 function stop(){clearInterval(S.iv);ws.hidden=true}
 function start(ids){ids=ids.filter(function(n){return ex(n)&&!isDone(n)});if(!ids.length){var q=$("sqn");if(q)q.textContent="NOTHING LEFT TO DO. LEGEND!";return}
 S.q=ids;S.i=0;ws.hidden=false;begin("hold")}
-$("ssq").addEventListener("click",function(){start([].slice.call(document.querySelectorAll(".dqr:not(.ok)")).map(function(b){return +b.dataset.n}))});
+window.ariseSession=start;$("ssq").addEventListener("click",function(){start([].slice.call(document.querySelectorAll(".dqr:not(.ok)")).map(function(b){return +b.dataset.n}))});
 $("ssn").addEventListener("click",function(){start([].slice.call(mods.querySelectorAll(".ex:not(.done)")).slice(0,5).map(function(l){return +l.dataset.n}))});
 $("wsx").addEventListener("click",stop);
 $("wsd").addEventListener("click",adv);
@@ -1027,7 +1093,7 @@ $("scb").addEventListener("click",function(){var W=1080,Hh=1350,c=document.creat
 var g=x.createLinearGradient(0,0,0,Hh);g.addColorStop(0,"#12042b");g.addColorStop(.45,"#4a0e5c");g.addColorStop(.75,"#c2185b");g.addColorStop(1,"#ff7a3c");x.fillStyle=g;x.fillRect(0,0,W,Hh);
 x.fillStyle="rgba(3,8,20,.55)";x.fillRect(60,60,W-120,Hh-120);x.strokeStyle="#3cc8ff";x.lineWidth=4;x.strokeRect(60,60,W-120,Hh-120);
 x.textAlign="center";x.shadowColor="#ff3c9d";x.shadowBlur=40;x.fillStyle="#fff";x.font="900 150px Bungee,Orbitron,Arial Black,sans-serif";x.fillText("ARISE",W/2,260);x.shadowBlur=0;
-x.fillStyle="#ffd9a0";x.font="700 40px Rajdhani,Arial,sans-serif";x.fillText("PLAYER: SUBHAJIT",W/2,330);
+x.fillStyle="#ffd9a0";x.font="700 40px Rajdhani,Arial,sans-serif";x.fillText("PLAYER: "+((function(){try{return JSON.parse(ls("arise_prof")).name}catch(e){return ""}})()||"SUBHAJIT"),W/2,330);
 var r=($("sRank").textContent||"E").trim(),lv=($("sLv").textContent||"1").trim();
 x.shadowColor="#ffd36b";x.shadowBlur=50;x.fillStyle="#ffd36b";x.font="900 380px Bungee,Orbitron,Arial Black,sans-serif";x.fillText(r,W/2,760);x.shadowBlur=0;
 x.fillStyle="#8fe6ff";x.font="700 48px Rajdhani,Arial,sans-serif";x.fillText("RANK",W/2,820);
@@ -1038,6 +1104,164 @@ c.toBlob(function(b){if(!b)return;var f=new File([b],"arise-status.png",{type:"i
 if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:"Arise status"}).catch(function(){});
 else{var a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();setTimeout(function(){a.remove()},800)}
 sfx("chime");$("scb").textContent="✔ CARD READY";setTimeout(function(){$("scb").textContent="🖼 STATUS CARD"},1800)},"image/png")});
+})();
+</script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},pad=function(n){return n<10?"0"+n:""+n};
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function jp(k,d){try{var x=JSON.parse(ls(k));return x==null?d:x}catch(e){return d}}
+function sv(k,v){ls(k,JSON.stringify(v))}
+function sfx(n){window.ariseSfx&&window.ariseSfx[n]&&window.ariseSfx[n]()}
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function key(d){return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
+var today=key(new Date()),sd=$("sDone"),mods=$("mods"),cut=$("cut"),ready=0;setTimeout(function(){ready=1},2800);
+function done(){var m=(sd.textContent||"").match(/(\d+)/);return m?+m[1]:0}
+function vib(p){if(navigator.vibrate)navigator.vibrate(p)}
+function dl(file,name){var a=document.createElement("a");a.href=URL.createObjectURL(file);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();URL.revokeObjectURL(a.href)},900)}
+function shareFile(f,title){if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:title}).catch(function(){});else dl(f,f.name)}
+/* ===== coins ===== */
+var coins=+ls("arise_coins")||0,tt=0;
+function toast(t){var e=$("ct");if(!e){e=document.createElement("div");e.id="ct";document.body.appendChild(e)}e.textContent=t;e.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){e.classList.remove("on")},1600)}
+function cdraw(){$("coins").textContent=coins}
+function addC(n,why){coins+=n;ls("arise_coins",String(coins));cdraw();if(why)toast("+"+n+" 🪙 "+why)}
+/* ===== state ===== */
+var SH=jp("arise_shop",{own:{},th:"vice",au:"none",ti:""}),P=jp("arise_prof",{name:"SUBHAJIT",av:"🥷"});
+function applyAll(){document.body.dataset.th=SH.th||"vice";if(SH.au&&SH.au!=="none")document.body.dataset.au=SH.au;else delete document.body.dataset.au;
+var n=(P.name||"SUBHAJIT").toUpperCase(),tp=document.querySelector(".title p"),h3=document.querySelector(".nmx h3");if(tp)tp.textContent="COMBAT OS // PLAYER: "+n;if(h3){h3.textContent=n;h3.dataset.t=n}
+$("avb").textContent=P.av||"🥷";$("coinw").textContent=(SH.ti||"").toUpperCase();ttl()}
+function ttl(){var b=document.querySelector("#stt .ttl b");if(b&&SH.ti&&b.textContent!==SH.ti)b.textContent=SH.ti}
+new MutationObserver(ttl).observe($("stt"),{childList:true,subtree:true});
+/* ===== earn coins ===== */
+var PD=jp("arise_paid",{d:"",ids:[]});if(PD.d!==today)PD={d:today,ids:[]};
+mods.addEventListener("click",function(e){var b=e.target.closest(".chk");if(!b)return;var li=b.closest(".ex");setTimeout(function(){var n=+li.dataset.n;if(!ready||!li.classList.contains("done")||PD.ids.indexOf(n)>-1)return;PD.ids.push(n);sv("arise_paid",PD);addC(10,"SKILL")},0)});
+function wid(){var d=new Date(),k=(d.getDay()+6)%7,m=new Date(d);m.setDate(d.getDate()-k);return key(m)}
+new MutationObserver(function(){var t=($("dq").textContent||"").match(/(\d+)\s*\/\s*(\d+)/);if(ready&&t&&+t[2]>0&&t[1]===t[2]&&ls("arise_dqp")!==today){ls("arise_dqp",today);addC(50,"DAILY QUEST")}}).observe($("dq"),{childList:true,subtree:true,characterData:true});
+new MutationObserver(function(){if(ready&&$("boss").classList.contains("dead")&&ls("arise_bossp")!==wid()){ls("arise_bossp",wid());addC(100,"BOSS DEFEATED")}}).observe($("boss"),{attributes:true,attributeFilter:["class"]});
+/* ===== level-up cutscene ===== */
+var RK="EDCBAS",lastLv=+$("sLv").textContent||1,lastRk=($("sRank").textContent||"E").trim(),lut=0;
+function cine(a,b,c){var el=$("lu");$("lus").textContent=a;$("lub").textContent=b;$("lun").textContent=c;el.hidden=false;document.body.classList.add("lu");sfx("level");try{window.ariseBoom&&window.ariseBoom(.6)}catch(e){}vib([60,40,60,40,200]);
+var lt=el.querySelector(".lut");lt.style.animation="none";void lt.offsetWidth;lt.style.animation="";clearTimeout(lut);lut=setTimeout(endLu,3400)}
+function endLu(){clearTimeout(lut);$("lu").hidden=true;document.body.classList.remove("lu")}
+$("lu").addEventListener("click",endLu);
+function lvchk(){var lv=+$("sLv").textContent||1,rk=($("sRank").textContent||"E").trim();
+if(ready){if(RK.indexOf(rk)>RK.indexOf(lastRk)){cine("RANK UP",rk,"+60 COINS");addC(60)}else if(lv>lastLv){cine("LEVEL UP","LV "+lv,"+25 COINS");addC(25)}}lastLv=lv;lastRk=rk}
+[$("sLv"),$("sRank")].forEach(function(e){new MutationObserver(lvchk).observe(e,{childList:true,characterData:true,subtree:true})});
+/* ===== hub sheet ===== */
+var cur=null,curI=null,clean=null;
+function openH(t,html,h,i){closeClean();$("hbt").textContent=t;$("hbb").innerHTML=html;cur=h||null;curI=i||null;$("hub").hidden=false;$("hub").scrollTop=0}
+function closeClean(){if(clean){try{clean()}catch(e){}clean=null}}
+function closeH(){closeClean();$("hub").hidden=true;cur=curI=null}
+$("hbx").addEventListener("click",closeH);
+$("hbb").addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(b&&cur){cur(b.dataset.a,b,e)}});
+$("hbb").addEventListener("input",function(e){if(curI)curI(e)});
+function names(){var o=[];mods.querySelectorAll(".ex").forEach(function(l){var en=l.querySelector(".en");o.push({n:+l.dataset.n,t:en?en.textContent.replace(/^\d+\.\s*/,""):"",bn:(l.querySelector(".bn")||{}).textContent||"",done:l.classList.contains("done")})});return o}
+function nameOf(n){var a=names().filter(function(x){return x.n===n})[0];return a?a.t:"#"+n}
+/* ===== profile ===== */
+var AVS=["🥷","🧙","🦸","🐺","🦅","🐉","🔥","⚡","🌙","👑","🗡","🛡"];
+function rProf(){var av=P.av,h='<div class="hsec">NAME</div><input class="hin" id="pnm" maxlength="14" value="'+esc(P.name)+'" placeholder="Your hunter name"><div class="hsec">AVATAR</div><div class="avs">'+AVS.map(function(a){return '<button type="button" data-a="av:'+a+'" class="'+(a===av?"sel":"")+'">'+a+'</button>'}).join("")+'</div>';
+h+='<div class="hr"><div class="gp">RANK '+esc($("sRank").textContent)+' · LV '+esc($("sLv").textContent)+'<small>'+done()+' / 92 SKILLS · '+esc((SH.ti||"NO TITLE").toUpperCase())+'</small></div><b>🪙 '+coins+'</b></div><button class="hb" data-a="saveprof" style="width:100%;margin-top:6px;min-height:46px">SAVE PROFILE</button>';
+openH("PROFILE",h,function(a){if(a.indexOf("av:")===0){P.av=a.slice(3);rProf()}else if(a==="saveprof"){var v=($("pnm").value||"").trim().toUpperCase().slice(0,14)||"SUBHAJIT";P.name=v;sv("arise_prof",P);applyAll();sfx("chime");toast("PROFILE SAVED");closeH()}})}
+/* ===== shop ===== */
+var IT={th:[["vice","VICE CITY",0],["cyber","CYBER BLUE",150],["blood","BLOOD NIGHT",150],["emerald","EMERALD",200]],au:[["none","NO AURA",0],["gold","GOLD AURA",100],["violet","VIOLET AURA",100],["fire","FIRE AURA",150]],ti:[["","NO TITLE",0],["SHADOW MONARCH","SHADOW MONARCH",300],["IRON WILL","IRON WILL",120],["NIGHT OWL","NIGHT OWL",100]]};
+var SN={th:"THEMES",au:"AURAS",ti:"TITLES"};
+function rShop(){var h='<div class="hr"><div class="gp">YOUR COINS<small>EARN: +10 SKILL · +50 DAILY QUEST · +100 BOSS · +25 LEVEL UP · +30 GATE RUSH</small></div><b>🪙 '+coins+'</b></div>';
+["th","au","ti"].forEach(function(t){h+='<div class="hsec">'+SN[t]+'</div>';IT[t].forEach(function(it){var own=it[2]===0||SH.own[t+":"+it[0]],eq=SH[t]===it[0]||(t==="ti"&&!SH.ti&&it[0]==="");
+h+='<div class="hr"><div class="gp">'+it[1]+'<small>'+(own?"OWNED":it[2]+" COINS")+'</small></div><button type="button" class="hb '+(eq?"on":own?"g":(coins<it[2]?"dim":""))+'" data-a="'+(own?"eq":"buy")+':'+t+':'+it[0]+'">'+(eq?"EQUIPPED":own?"EQUIP":"BUY")+'</button></div>'})});
+openH("SHOP",h,function(a){var p=a.split(":"),op=p[0],t=p[1],id=p.slice(2).join(":"),it=IT[t].filter(function(x){return x[0]===id})[0];if(!it)return;
+if(op==="buy"){if(coins<it[2]){toast("NOT ENOUGH COINS");return}coins-=it[2];ls("arise_coins",String(coins));cdraw();SH.own[t+":"+id]=1;sfx("pass")}
+SH[t]=id;sv("arise_shop",SH);applyAll();sfx("chime");rShop()})}
+/* ===== skill tree ===== */
+function rTree(){var cols={},ord=[],T=jp("arise_tree",{});[].slice.call(mods.children).forEach(function(m){var g=m.dataset.g||"?",c=(m.querySelector("[data-cnt]")||{}).textContent||"0/0",p=c.split("/"),a=+p[0]||0,b=+p[1]||1;if(!cols[g]){cols[g]=[];ord.push(g)}cols[g].push({el:m,t:(m.querySelector(".tt b")||{}).textContent||"",a:a,b:b})});
+var h='<div class="tre">';ord.forEach(function(g){h+='<div><h4>'+esc(g)+'</h4>';var prev=true;cols[g].forEach(function(n,i){var max=n.a>=n.b,act=!max&&(n.a>0||prev);if(max&&!T[g+i]&&ready){T[g+i]=1;addC(100,"SKILL MASTERED")}
+h+='<button type="button" class="tn '+(max?"max":act?"act":"")+'" data-a="go:'+[].indexOf.call(mods.children,n.el)+'">'+esc(n.t)+'<b>'+(max?"★ MASTERED":n.a+"/"+n.b)+'</b></button>';prev=max});h+='</div>'});
+sv("arise_tree",T);h+='</div><div class="hsec">MASTER A MODULE = +100 COINS</div>';
+openH("SKILL TREE",h,function(a){if(a.indexOf("go:")!==0)return;var m=mods.children[+a.slice(3)];if(!m)return;closeH();if(m.hidden){var t=document.querySelector(".tab");if(t)t.click()}if(!m.classList.contains("open"))m.querySelector(".mh").click();setTimeout(function(){m.scrollIntoView({behavior:"smooth",block:"start"})},80)})}
+/* ===== gate rush mini-game ===== */
+function rGate(){var best=+ls("arise_gbest")||0,h='<div class="gst"><span>SCORE <b id="gsc">0</b></span><span>TIME <b id="gtm">20</b></span><span>BEST '+best+'</b></span></div><div class="gar" id="gar"></div><div class="hr"><div class="gp">TAP HEXAGONS · AVOID RED<small>SCORE 15+ TO WIN +30 COINS (ONCE PER DAY)</small></div></div><button class="hb" data-a="gs" style="width:100%;min-height:50px" id="gbtn">START</button>';
+var run=0,sc=0,tl=20,tm=0,sp=0,tg=null;
+function stop(){run=0;clearInterval(tm);clearTimeout(sp);if(tg){tg.remove();tg=null}}
+function spawn(){if(!run)return;if(tg)tg.remove();var ar=$("gar"),bad=Math.random()<.25,b=document.createElement("button");b.type="button";b.className="gtg"+(bad?" bad":"");b.textContent=bad?"✖":"⚔";
+b.style.left=Math.random()*(ar.clientWidth-58)+"px";b.style.top=Math.random()*(ar.clientHeight-62)+"px";
+b.addEventListener("pointerdown",function(e){e.preventDefault();if(!run)return;sc+=bad?-2:1;if(sc<0)sc=0;$("gsc").textContent=sc;sfx(bad?"tick":"chime");if(bad)vib(60);b.remove();tg=null;clearTimeout(sp);spawn()});
+ar.appendChild(b);tg=b;sp=setTimeout(spawn,Math.max(450,950-sc*22))}
+function end(){stop();var win=sc>=15,b2=Math.max(best,sc);ls("arise_gbest",String(b2));$("gbtn").textContent=(win?"VICTORY! ":"TRY AGAIN · ")+"SCORE "+sc;
+if(win&&ls("arise_gate")!==today){ls("arise_gate",today);addC(30,"GATE CLEARED");sfx("level")}else if(win)sfx("pass")}
+openH("GATE RUSH",h,function(a){if(a!=="gs")return;stop();sc=0;tl=20;run=1;$("gsc").textContent=0;$("gtm").textContent=20;$("gbtn").textContent="GO!";spawn();tm=setInterval(function(){tl--;if($("gtm"))$("gtm").textContent=tl;if(tl<=0)end()},1000)});clean=stop}
+/* ===== custom routine ===== */
+var RT=jp("arise_rt",{}),rd=new Date().getDay(),addOpen=false,DN=["SUN","MON","TUE","WED","THU","FRI","SAT"];
+function rRt(){var h='<div class="dys">'+DN.map(function(d,i){return '<button type="button" data-a="d:'+i+'" class="'+(i===rd?"sel":"")+'">'+d+'<b>'+((RT[i]||[]).length||"")+'</b></button>'}).join("")+'</div>';var L=RT[rd]||[];
+h+=L.length?L.map(function(x,i){return '<div class="hr"><div class="gp">'+esc(nameOf(x.n))+'<small>'+x.s+' SET'+(x.s>1?"S":"")+'</small></div><div class="stp"><button type="button" data-a="s-:'+i+'">−</button><button type="button" data-a="s+:'+i+'">+</button><button type="button" data-a="x:'+i+'">✕</button></div></div>'}).join(""):'<div class="hr"><div class="gp">NO SKILLS FOR '+DN[rd]+'<small>TAP ADD SKILL</small></div></div>';
+h+='<button class="hb g" data-a="addt" style="width:100%;margin-top:6px;min-height:46px">'+(addOpen?"HIDE LIST":"＋ ADD SKILL")+'</button>';
+if(addOpen)h+='<input class="hin" id="rsq" placeholder="Search skill..." style="margin-top:8px"><div id="rlist">'+rl("")+'</div>';
+h+='<button class="hb" data-a="go" style="width:100%;margin-top:10px;min-height:52px">▶ START TODAY\'S ROUTINE</button>';
+openH("MY ROUTINE",h,function(a){var p=a.split(":"),op=p[0],v=+p[1];if(op==="d"){rd=v}else if(op==="addt"){addOpen=!addOpen}else if(op==="add"){(RT[rd]=RT[rd]||[]).push({n:v,s:1});sv("arise_rt",RT)}else if(op==="x"){RT[rd].splice(v,1);sv("arise_rt",RT)}else if(op==="s+"){RT[rd][v].s=Math.min(5,RT[rd][v].s+1);sv("arise_rt",RT)}else if(op==="s-"){RT[rd][v].s=Math.max(1,RT[rd][v].s-1);sv("arise_rt",RT)}
+else if(op==="go"){var td=(RT[new Date().getDay()]||[]),ids=[];td.forEach(function(x){for(var k=0;k<x.s;k++)ids.push(x.n)});if(!ids.length){toast("NO ROUTINE FOR TODAY");return}if(!window.ariseSession){toast("SESSION NOT READY");return}closeH();window.ariseSession(ids);return}
+var q=$("rsq")?$("rsq").value:"";rRt();if($("rsq")){$("rsq").value=q;$("rlist").innerHTML=rl(q)}},function(e){if(e.target.id==="rsq")$("rlist").innerHTML=rl(e.target.value)})}
+function rl(q){q=(q||"").toLowerCase();return names().filter(function(x){return !q||(x.t+" "+x.bn).toLowerCase().indexOf(q)>-1}).slice(0,40).map(function(x){return '<div class="hr"><div class="gp">'+esc(x.t)+'<small>'+esc(x.bn)+'</small></div><button type="button" class="hb g" data-a="add:'+x.n+'">ADD</button></div>'}).join("")}
+/* ===== trackers ===== */
+var TR=[["waist","WAIST","cm",30,200],["chest","CHEST","cm",30,200],["sleep","SLEEP","hours",0,24],["water","WATER","glasses",0,30],["pain","PAIN","/10",0,10],["mood","MOOD","/5",1,5]],TD=jp("arise_tr",{}),ts=0;
+function spark(v){if(!v.length)return '<svg class="sp" viewBox="0 0 200 74"></svg>';var mn=Math.min.apply(0,v),mx=Math.max.apply(0,v),sp=Math.max(.5,mx-mn),pt=v.map(function(y,j){return[v.length>1?j/(v.length-1)*180+10:100,60-(y-mn)/sp*46]});return '<svg class="sp" viewBox="0 0 200 74" preserveAspectRatio="none"><polyline points="'+pt.map(function(p){return p[0].toFixed(1)+","+p[1].toFixed(1)}).join(" ")+'"/>'+pt.map(function(p){return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="3"/>'}).join("")+'</svg>'}
+function rTr(){var t=TR[ts],D=TD[t[0]]||{},ks=Object.keys(D).sort(function(a,b){return new Date(a)-new Date(b)}).slice(-14),vals=ks.map(function(k){return D[k]});
+var h='<div class="pl">'+TR.map(function(x,i){return '<button type="button" data-a="t:'+i+'" class="'+(i===ts?"sel":"")+'">'+x[1]+'</button>'}).join("")+'</div>'+spark(vals);
+h+='<div class="hr"><div class="gp">'+(vals.length?"LATEST "+vals[vals.length-1]+" "+t[2]:"NO ENTRIES YET")+'<small>'+(vals.length>1?"CHANGE "+(vals[vals.length-1]-vals[0]>0?"+":"")+(vals[vals.length-1]-vals[0]).toFixed(1)+" "+t[2]+" OVER "+vals.length+" ENTRIES":"LAST 14 ENTRIES SHOWN")+'</small></div></div>';
+h+='<div style="display:flex;gap:8px"><input class="hin" id="trv" type="number" inputmode="decimal" step="0.1" min="'+t[3]+'" max="'+t[4]+'" placeholder="Today ('+t[2]+')"><button class="hb" data-a="save" style="min-width:110px">SAVE</button></div>';
+openH("TRACKERS",h,function(a){if(a.indexOf("t:")===0){ts=+a.slice(2);rTr()}else if(a==="save"){var v=parseFloat($("trv").value);if(!(v>=t[3]&&v<=t[4])){toast("ENTER "+t[3]+" TO "+t[4]);return}(TD[t[0]]=TD[t[0]]||{})[today]=Math.round(v*10)/10;sv("arise_tr",TD);sfx("chime");rTr()}})}
+/* ===== calendar ===== */
+var cy=new Date().getFullYear(),cm=new Date().getMonth(),MN=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+function rCal(){var H=jp("arise_hist",{}),f=new Date(cy,cm,1),dn=new Date(cy,cm+1,0).getDate(),off=f.getDay(),tot=0,act=0,h='<div class="cmn"><button class="hb g" data-a="pm">‹</button><span>'+MN[cm]+' '+cy+'</span><button class="hb g" data-a="nm">›</button></div><div class="cg">'+"SMTWTFS".split("").map(function(d){return '<div class="w">'+d+'</div>'}).join("");
+for(var i=0;i<off;i++)h+='<div style="background:none;border:0"></div>';
+for(var d=1;d<=dn;d++){var k=cy+"-"+(cm+1)+"-"+d,v=H[k]||0;tot+=v;if(v)act++;h+='<div class="'+(v>=6?"h3":v>=3?"h2":v>=1?"h1":"")+(k===today?" tdy":"")+'" data-a="day:'+d+'">'+d+'</div>'}
+h+='</div><div class="hr" style="margin-top:10px"><div class="gp" id="cdi">'+tot+' SKILLS · '+act+' ACTIVE DAYS<small>TAP A DAY FOR DETAILS</small></div></div>';
+openH("CALENDAR",h,function(a){if(a==="pm"){cm--;if(cm<0){cm=11;cy--}rCal()}else if(a==="nm"){cm++;if(cm>11){cm=0;cy++}rCal()}else if(a.indexOf("day:")===0){var d=+a.slice(4),v=(H[cy+"-"+(cm+1)+"-"+d]||0);$("cdi").innerHTML=d+" "+MN[cm]+": "+v+" SKILL"+(v===1?"":"S")+"<small>"+(v>=6?"LEGENDARY DAY":v>=3?"STRONG DAY":v>=1?"ACTIVE DAY":"REST DAY")+"</small>"}})}
+/* ===== monthly report ===== */
+function monthData(){var H=jp("arise_hist",{}),n=new Date().getDate(),y=new Date().getFullYear(),m=new Date().getMonth(),arr=[],tot=0,act=0,best=0;for(var d=1;d<=new Date(y,m+1,0).getDate();d++){var v=H[y+"-"+(m+1)+"-"+d]||0;arr.push(v);tot+=v;if(v)act++;if(v>best)best=v}return{arr:arr,tot:tot,act:act,best:best,name:MN[m]+" "+y,n:n}}
+function rRep(){var M=monthData(),h='<div class="hr"><div class="gp">'+M.name+'<small>'+M.tot+' SKILLS · '+M.act+' ACTIVE DAYS · BEST DAY '+M.best+'</small></div></div><div class="hr"><div class="gp">RANK '+esc($("sRank").textContent)+' · LV '+esc($("sLv").textContent)+'<small>STREAK '+(ls("arise_streak")||1)+' DAYS · '+coins+' COINS</small></div></div><button class="hb" data-a="img" style="width:100%;min-height:52px">🖼 CREATE REPORT IMAGE</button>';
+openH("MONTHLY REPORT",h,function(a){if(a!=="img")return;var W=1080,Hh=1350,c=document.createElement("canvas");c.width=W;c.height=Hh;var x=c.getContext("2d"),g=x.createLinearGradient(0,0,0,Hh);g.addColorStop(0,"#12042b");g.addColorStop(.6,"#3b0b57");g.addColorStop(1,"#a3175f");x.fillStyle=g;x.fillRect(0,0,W,Hh);x.fillStyle="rgba(3,8,20,.6)";x.fillRect(50,50,W-100,Hh-100);x.strokeStyle="#3cc8ff";x.lineWidth=4;x.strokeRect(50,50,W-100,Hh-100);
+x.textAlign="center";x.fillStyle="#fff";x.shadowColor="#ff3c9d";x.shadowBlur=30;x.font="900 110px Bungee,Orbitron,Arial Black,sans-serif";x.fillText("ARISE",W/2,190);x.shadowBlur=0;x.fillStyle="#ffd9a0";x.font="700 46px Rajdhani,Arial,sans-serif";x.fillText("MONTHLY REPORT · "+M.name+" · "+(P.name||"").toUpperCase(),W/2,260);
+function st(px,l,v){x.fillStyle="#fff";x.font="900 92px Bungee,Orbitron,Arial Black,sans-serif";x.fillText(v,px,470);x.fillStyle="#9fc4ff";x.font="700 36px Rajdhani,Arial,sans-serif";x.fillText(l,px,525)}
+st(240,"SKILLS",M.tot);st(540,"ACTIVE DAYS",M.act);st(840,"BEST DAY",M.best);
+var bw=(W-200)/M.arr.length,mx=Math.max(1,M.best),base=1130,i;for(i=0;i<M.arr.length;i++){var hh=M.arr[i]/mx*400;x.fillStyle=M.arr[i]?(i+1===M.n?"#ffd36b":"#8a5cff"):"#1b2a52";x.fillRect(100+i*bw+2,base-Math.max(6,hh),bw-4,Math.max(6,hh))}
+x.fillStyle="#7f98c4";x.font="700 30px Rajdhani,Arial,sans-serif";x.fillText("DAILY SKILLS THIS MONTH",W/2,1190);x.fillStyle="#ffd9a0";x.font="700 40px Rajdhani,Arial,sans-serif";x.fillText("RANK "+($("sRank").textContent||"E").trim()+"  ·  LEVEL "+($("sLv").textContent||"1").trim()+"  ·  STREAK "+(ls("arise_streak")||1),W/2,1270);
+c.toBlob(function(b){if(b){sfx("chime");shareFile(new File([b],"arise-report-"+today+".png",{type:"image/png"}),"Arise report")}},"image/png")})}
+/* ===== reminder (.ics) ===== */
+function rRem(){var h='<div class="hr"><div class="gp">DAILY WORKOUT REMINDER<small>Creates a calendar file. Open it on your phone and it adds a repeating alarm.</small></div></div><div class="hsec">TIME</div><input class="hin" id="rtm" type="time" value="'+(ls("arise_rtm")||"06:30")+'"><button class="hb" data-a="ics" style="width:100%;margin-top:10px;min-height:52px">⏰ DOWNLOAD REMINDER FILE</button>';
+openH("REMINDER",h,function(a){if(a!=="ics")return;var t=($("rtm").value||"06:30").split(":"),hh=pad(+t[0]),mm=pad(+t[1]);ls("arise_rtm",hh+":"+mm);var d=new Date(),ds=d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate());
+var L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Arise//Combat OS//EN","BEGIN:VEVENT","UID:arise-daily-"+Date.now()+"@arise","DTSTAMP:"+ds+"T000000Z","DTSTART:"+ds+"T"+hh+mm+"00","DURATION:PT20M","RRULE:FREQ=DAILY","SUMMARY:ARISE: Daily Quest","DESCRIPTION:Time to complete your skills. Arise!","BEGIN:VALARM","TRIGGER:PT0M","ACTION:DISPLAY","DESCRIPTION:Arise: Daily Quest","END:VALARM","END:VEVENT","END:VCALENDAR"];
+shareFile(new File([L.join("\r\n")],"arise-reminder.ics",{type:"text/calendar"}),"Arise reminder");sfx("chime");toast("REMINDER FILE READY")})}
+/* ===== skill notes ===== */
+var NT=jp("arise_notes",{});
+mods.querySelectorAll(".ex").forEach(function(l){var b=document.createElement("button"),n=l.dataset.n;b.type="button";b.className="nt"+(NT[n]?" has":"");b.textContent="📝";b.setAttribute("aria-label","Note");var v=l.querySelector(".vid");l.insertBefore(b,v);
+b.addEventListener("click",function(e){e.stopPropagation();openH("NOTE · "+nameOf(+n),'<textarea class="hin" id="ntx" placeholder="e.g. left leg felt tight today...">'+esc(NT[n]||"")+'</textarea><div style="display:flex;gap:8px;margin-top:10px"><button class="hb g" data-a="clr" style="flex:1;min-height:48px">CLEAR</button><button class="hb" data-a="sv" style="flex:2;min-height:48px">SAVE NOTE</button></div>',function(a){if(a==="sv"){var t=$("ntx").value.trim();if(t)NT[n]=t;else delete NT[n]}else{delete NT[n]}sv("arise_notes",NT);b.classList.toggle("has",!!NT[n]);sfx("chime");closeH()})})});
+/* ===== voice guide ===== */
+var vm=ls("arise_voice")||"off",lastS="",lastT="";
+function speak(t){if(vm==="off"||!window.speechSynthesis)return;try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t),bn=vm==="bn",vs=speechSynthesis.getVoices().filter(function(v){return v.lang&&v.lang.toLowerCase().indexOf(bn?"bn":"en")===0});u.lang=vs[0]?vs[0].lang:(bn?"bn-IN":"en-US");if(vs[0])u.voice=vs[0];u.rate=.95;speechSynthesis.speak(u)}catch(e){}}
+function sess(){if($("ws").hidden)return;var ph=($("wsp").textContent||"").trim(),nm=($("wsn").textContent||"").trim(),bn=($("wsb").textContent||"").trim(),k=ph+"|"+nm;if(k===lastS)return;lastS=k;var b=vm==="bn";
+if(ph==="REST")speak(b?"বিশ্রাম। "+nm.replace(/^NEXT:\s*/,"পরের: "):"Rest. "+nm.replace(/^NEXT:\s*/,"Next: "));else speak(b&&bn?nm+". "+bn+". শুরু করুন":nm+". Hold the pose.")}
+function cd(){var t=($("wst").textContent||"").trim();if(t===lastT)return;lastT=t;if(($("wsp").textContent||"").trim()==="HOLD"||($("wsp").textContent||"").trim()==="REST"){var m=t.match(/^00:0([1-3])$/);if(m)speak(vm==="bn"?["","এক","দুই","তিন"][+m[1]]:m[1])}}
+[$("wsn"),$("wsp")].forEach(function(e){new MutationObserver(sess).observe(e,{childList:true,characterData:true,subtree:true})});
+new MutationObserver(cd).observe($("wst"),{childList:true,characterData:true,subtree:true});
+new MutationObserver(function(){if($("ws").hidden){lastS=lastT="";try{speechSynthesis.cancel()}catch(e){}}else sess()}).observe($("ws"),{attributes:true,attributeFilter:["hidden"]});
+/* ===== background music (generated, original) ===== */
+var mAC=null,mG=null,mI=0,mOn=ls("arise_music")==="1",mPlay=false,mNext=0,mBar=0,entered=0,CH=[[220,1.189],[174.6,1.26],[261.6,1.26],[196,1.26]];
+function mn(type,f,t,d,v){var o=mAC.createOscillator(),g=mAC.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+Math.min(.8,d/3));g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(mG);o.start(t);o.stop(t+d+.1)}
+function msched(){if(!mPlay)return;while(mNext<mAC.currentTime+1.6){var c=CH[mBar%4],r=c[0],t=mNext,tones=[r,r*c[1],r*1.498];tones.forEach(function(f){mn("triangle",f,t,4.4,.07)});mn("sine",r/2,t,4.4,.16);
+for(var i=0;i<8;i++){var f=tones[[0,1,2,1,0,2,1,2][i]]*2;mn("triangle",f,t+i*.45,.5,.05)}mNext+=3.6;mBar++}}
+function mStart(){if(mPlay)return;var C=window.AudioContext||window.webkitAudioContext;if(!C)return;try{if(!mAC){mAC=new C();mG=mAC.createGain();mG.gain.value=0;mG.connect(mAC.destination)}if(mAC.state==="suspended")mAC.resume()}catch(e){return}
+mG.gain.cancelScheduledValues(mAC.currentTime);mG.gain.setValueAtTime(mG.gain.value,mAC.currentTime);mG.gain.linearRampToValueAtTime(.55,mAC.currentTime+3);mPlay=true;mNext=mAC.currentTime+.1;clearInterval(mI);mI=setInterval(msched,500);msched()}
+function mStop(){if(!mPlay||!mAC)return;mPlay=false;clearInterval(mI);mG.gain.cancelScheduledValues(mAC.currentTime);mG.gain.setValueAtTime(mG.gain.value,mAC.currentTime);mG.gain.linearRampToValueAtTime(0,mAC.currentTime+.8);setTimeout(function(){try{if(!mPlay)mAC.suspend()}catch(e){}},1200)}
+function mAuto(){if(mOn&&entered&&cut.hidden)mStart()}
+document.addEventListener("arise-enter",function(){entered=1;setTimeout(mAuto,4200)});
+new MutationObserver(mAuto).observe(cut,{attributes:true,attributeFilter:["hidden"]});
+document.addEventListener("visibilitychange",function(){if(document.hidden)mStop();else mAuto()});
+/* ===== hub tiles ===== */
+var TL=[["👤","PROFILE","prof"],["🛒","SHOP","shop"],["🌳","SKILL TREE","tree"],["⚔","GATE RUSH","gate"],["📋","MY ROUTINE","rtn"],["📈","TRACKERS","trk"],["📅","CALENDAR","cal"],["📄","REPORT","rep"],["⏰","REMINDER","rem"],["🗣","VOICE","voice"],["🎵","MUSIC","music"]];
+function tiles(){$("hubg").innerHTML=TL.map(function(t){var on=t[2]==="voice"?vm!=="off":t[2]==="music"?mOn:false,lab=t[2]==="voice"?"VOICE: "+vm.toUpperCase():t[2]==="music"?"MUSIC: "+(mOn?"ON":"OFF"):t[1];return '<button type="button" data-t="'+t[2]+'" class="'+(on?"on":"")+'"><span>'+t[0]+'</span>'+lab+'</button>'}).join("")}
+$("hubg").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;sfx("tick");var t=b.dataset.t;
+if(t==="prof")rProf();else if(t==="shop")rShop();else if(t==="tree")rTree();else if(t==="gate")rGate();else if(t==="rtn")rRt();else if(t==="trk")rTr();else if(t==="cal")rCal();else if(t==="rep")rRep();else if(t==="rem")rRem();
+else if(t==="voice"){vm=vm==="off"?"en":vm==="en"?"bn":"off";ls("arise_voice",vm);tiles();if(vm!=="off")speak(vm==="bn"?"ভয়েস গাইড চালু":"Voice guide on");else try{speechSynthesis.cancel()}catch(e){}}
+else if(t==="music"){mOn=!mOn;ls("arise_music",mOn?"1":"0");if(mOn)mStart();else mStop();tiles()}});
+applyAll();cdraw();tiles();
 })();
 </script>
 </body></html>
