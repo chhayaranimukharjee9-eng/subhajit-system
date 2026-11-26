@@ -540,7 +540,28 @@ body[data-th="emerald"] .flare{background:radial-gradient(circle,rgba(155,255,20
 body[data-au="gold"]{--auc:#ffd36b}body[data-au="violet"]{--auc:#b79bff}body[data-au="fire"]{--auc:#ff6a2a}
 body[data-au] .aura i:nth-child(1){border:2px solid var(--auc);box-shadow:0 0 18px var(--auc)}body[data-au] .aura i:nth-child(2){border-color:var(--auc)}
 body[data-au] .emb{filter:drop-shadow(0 0 14px var(--auc))}
-</style><style id="arise-hub2">#hub .cl{position:absolute;right:12px;top:10px;width:44px;height:44px;background:none;border:0;color:#9fc4ff;font-size:22px}#hbt{font:800 14px Bungee,Orbitron,sans-serif;letter-spacing:.25em;color:#c6b3ff}</style></head><body>
+</style><style id="arise-hub2">#hub .cl{position:absolute;right:12px;top:10px;width:44px;height:44px;background:none;border:0;color:#9fc4ff;font-size:22px}#hbt{font:800 14px Bungee,Orbitron,sans-serif;letter-spacing:.25em;color:#c6b3ff}</style><style id="arise-music">
+.mu-now{padding:14px;border:1px solid rgba(255,60,157,.5);border-left:3px solid var(--pink);background:linear-gradient(165deg,#1a0a33,#07122b);border-radius:2px;text-align:center}
+.mu-ti{font:400 17px Bungee,Orbitron,sans-serif;color:#fff;line-height:1.25;min-height:44px;word-break:break-word}
+.mu-sub{font:700 11px Rajdhani,sans-serif;letter-spacing:.2em;color:#ffd9a0;margin-top:2px}
+.mu-seek{display:flex;align-items:center;gap:8px;margin:12px 0 4px;font:700 12px Rajdhani,sans-serif;color:#9fc4ff}
+.mu-seek input,.mu-vol input{flex:1;min-width:0;accent-color:#ff3c9d;height:28px}
+.mu-ctl{display:flex;justify-content:center;gap:10px;align-items:center;margin-top:6px}
+.mu-ctl button{width:48px;height:48px;border-radius:50%;background:#0b1b3c;border:1px solid rgba(60,200,255,.5);color:#cde8ff;font-size:18px}
+.mu-ctl .pp{width:64px;height:64px;background:linear-gradient(135deg,var(--pink),var(--orange));border:0;color:#fff;font-size:24px;box-shadow:0 0 18px rgba(255,60,157,.6)}
+.mu-ctl .on{border-color:var(--pink);color:#ffd36b;background:#2a0f3d}
+.mu-vol{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:16px}
+.mu-add{display:block;width:100%;min-height:50px;margin:14px 0 6px;background:linear-gradient(90deg,var(--cyan),var(--violet));border:0;color:#fff;font:700 15px Rajdhani,sans-serif;letter-spacing:.2em;border-radius:2px}
+.mu-info{font:700 12px Rajdhani,sans-serif;letter-spacing:.14em;color:#9fc4ff;margin:2px 0 8px}
+.mu-row{display:flex;align-items:center;gap:8px;min-height:50px;padding:6px 8px;margin-bottom:5px;background:#07122b;border:1px solid rgba(60,200,255,.2);border-radius:2px}
+.mu-row.cur{border-color:var(--pink);background:linear-gradient(90deg,rgba(255,60,157,.18),#07122b)}
+.mu-row .pl{flex:1;min-width:0;text-align:left;background:none;border:0;color:#e6f4ff;font:700 15px Rajdhani,'Hind Siliguri',sans-serif;padding:6px 4px;display:flex;gap:8px;align-items:center}
+.mu-row .pl span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mu-row .pl em{flex:none;font-style:normal;color:#ff9ad0;font-size:13px;min-width:18px}
+.mu-row small{flex:none;color:#7f98c4;font:700 11px Rajdhani,sans-serif}
+.mu-row .dl{flex:none;width:38px;height:38px;background:none;border:0;color:#ff7a8a;font-size:17px}
+.mu-empty{padding:22px 10px;text-align:center;font:600 15px Rajdhani,'Hind Siliguri',sans-serif;color:#9fc4ff;border:1px dashed rgba(60,200,255,.35);border-radius:2px}
+.mu-clr{display:block;margin:10px auto 0;background:none;border:0;color:#ff7a8a;font:700 12px Rajdhani,sans-serif;letter-spacing:.16em}
+</style></head><body>
 <div id="cut" hidden aria-hidden="true"><div class="nmx"><i class="fl2"></i><small>PLAYER</small><h3 data-t="SUBHAJIT">SUBHAJIT</h3><span>THE HUNTER AWAKENS</span><i class="swp"></i></div><div class="cs" id="cs">
 <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
 <defs><radialGradient id="gv"><stop offset="0" stop-color="#8a5cff" stop-opacity=".75"/><stop offset="1" stop-color="#8a5cff" stop-opacity="0"/></radialGradient>
@@ -618,8 +639,8 @@ body[data-au] .emb{filter:drop-shadow(0 0 14px var(--auc))}
   <nav class="tabs" id="tabs" aria-label="Filter"></nav>
   <div class="mods" id="mods"></div>
 
-  <div class="tools" id="tools"><button class="cutbtn" id="scb" type="button">🖼 STATUS CARD</button><button class="cutbtn" id="rtb" type="button">⏱ REST TIMER</button><button class="cutbtn" id="awk" type="button">🔆 STAY AWAKE</button><button class="cutbtn" id="shr" type="button">📤 SHARE</button><button class="cutbtn" id="blb" type="button">⚖ BODY LOG</button><button class="cutbtn" id="bkp" type="button">💾 BACKUP</button><button class="cutbtn" id="rst" type="button">📥 RESTORE</button><input id="rsf" type="file" accept="application/json,.json" hidden><button class="cutbtn" id="ins" type="button" hidden>⬇ INSTALL</button></div>
-  <div class="foot"><span>[ SYSTEM LOG: 92 / 92 SYNCED ]</span><button class="cutbtn" id="sndbtn" type="button">🔊 SOUND ON</button><button class="cutbtn" id="cutbtn" type="button">▶ INTRO</button><button class="reset" id="reset" type="button">RESET</button></div>
+  <div class="tools" id="tools"><button class="cutbtn" id="scb" type="button">🖼 STATUS CARD</button><button class="cutbtn" id="rtb" type="button">⏱ REST TIMER</button><button class="cutbtn" id="awk" type="button">🔆 STAY AWAKE</button><button class="cutbtn" id="blb" type="button">⚖ BODY LOG</button><button class="cutbtn" id="ins" type="button" hidden>⬇ INSTALL</button></div>
+  <div class="foot"><span>[ SYSTEM LOG: 92 / 92 SYNCED ]</span><button class="cutbtn" id="cutbtn" type="button">▶ INTRO</button><button class="reset" id="reset" type="button">RESET</button></div>
 </div>
 
 <script>
@@ -923,10 +944,6 @@ var wl=null,awk=$("awk");
 function lock(){if(!("wakeLock" in navigator))return Promise.reject();return navigator.wakeLock.request("screen").then(function(l){wl=l;l.addEventListener("release",function(){wl=null})})}
 awk.addEventListener("click",function(){if(wl){wl.release();wl=null;awk.classList.remove("act");awk.textContent="🔆 STAY AWAKE";ls("arise_awk","0")}else lock().then(function(){awk.classList.add("act");awk.textContent="🔆 AWAKE: ON";ls("arise_awk","1")}).catch(function(){awk.textContent="🔆 NOT SUPPORTED"})});
 document.addEventListener("visibilitychange",function(){if(!document.hidden&&ls("arise_awk")==="1"&&!wl)lock().then(function(){awk.classList.add("act");awk.textContent="🔆 AWAKE: ON"}).catch(function(){})});
-/* share progress */
-$("shr").addEventListener("click",function(){var t="ARISE | Rank "+($("sRank").textContent||"").trim()+" | Lv "+($("sLv").textContent||"").trim()+" | "+done()+" skills done | "+($("stk")?$("stk").textContent:1)+" day streak";
-if(navigator.share)navigator.share({title:"Arise",text:t,url:location.href}).catch(function(){});
-else if(navigator.clipboard)navigator.clipboard.writeText(t+" "+location.href).then(function(){$("shr").textContent="✔ COPIED";setTimeout(function(){$("shr").textContent="📤 SHARE"},1600)}).catch(function(){})});
 /* install app */
 var dp=null;addEventListener("beforeinstallprompt",function(e){e.preventDefault();dp=e;$("ins").hidden=false});
 $("ins").addEventListener("click",function(){if(!dp)return;dp.prompt();dp.userChoice.finally(function(){dp=null;$("ins").hidden=true})});
@@ -981,15 +998,7 @@ $("blx").addEventListener("click",function(){bl.hidden=true});
 bl.addEventListener("click",function(e){if(e.target===bl)bl.hidden=true});
 $("bls2").addEventListener("click",function(){var x=parseFloat($("blv").value);if(!(x>=20&&x<=300)){$("bli").textContent="Enter weight between 20 and 300 kg";return}
 W[today]=Math.round(x*10)/10;var ks=Object.keys(W).sort((a,b)=>new Date(a)-new Date(b)).slice(-60),o={};ks.forEach(function(k){o[k]=W[k]});W=o;ls("arise_weight",JSON.stringify(W));$("blv").value="";sfx("chime");bdraw()});
-/* 4) backup / restore */
-$("bkp").addEventListener("click",function(){var o={app:"arise",v:1,t:Date.now(),data:{}};try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k==="combatos-done-v1"||k.indexOf("arise_")===0)o.data[k]=localStorage.getItem(k)}}catch(e){}
-var txt=JSON.stringify(o),f=new File([txt],"arise-backup-"+today+".json",{type:"application/json"});
-function dl(){var a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();URL.revokeObjectURL(a.href)},800)}
-if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:"Arise backup"}).catch(dl);else dl();
-$("bkp").textContent="✔ SAVED";setTimeout(function(){$("bkp").textContent="💾 BACKUP"},1800)});
-$("rst").addEventListener("click",function(){$("rsf").click()});
-$("rsf").addEventListener("change",function(){var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var o=JSON.parse(r.result);if(o.app!=="arise"||!o.data)throw 0;
-if(!confirm("Restore this backup? Current progress will be replaced."))return;Object.keys(o.data).forEach(function(k){if(k==="combatos-done-v1"||k.indexOf("arise_")===0)ls(k,String(o.data[k]))});location.reload()}catch(e){$("rst").textContent="✖ INVALID FILE";setTimeout(function(){$("rst").textContent="📥 RESTORE"},2000)}};r.readAsText(f);this.value=""});
+
 })();
 </script>
 <script>
@@ -1234,7 +1243,7 @@ var NT=jp("arise_notes",{});
 mods.querySelectorAll(".ex").forEach(function(l){var b=document.createElement("button"),n=l.dataset.n;b.type="button";b.className="nt"+(NT[n]?" has":"");b.textContent="📝";b.setAttribute("aria-label","Note");var v=l.querySelector(".vid");l.insertBefore(b,v);
 b.addEventListener("click",function(e){e.stopPropagation();openH("NOTE · "+nameOf(+n),'<textarea class="hin" id="ntx" placeholder="e.g. left leg felt tight today...">'+esc(NT[n]||"")+'</textarea><div style="display:flex;gap:8px;margin-top:10px"><button class="hb g" data-a="clr" style="flex:1;min-height:48px">CLEAR</button><button class="hb" data-a="sv" style="flex:2;min-height:48px">SAVE NOTE</button></div>',function(a){if(a==="sv"){var t=$("ntx").value.trim();if(t)NT[n]=t;else delete NT[n]}else{delete NT[n]}sv("arise_notes",NT);b.classList.toggle("has",!!NT[n]);sfx("chime");closeH()})})});
 /* ===== voice guide ===== */
-var vm=ls("arise_voice")||"off",lastS="",lastT="";
+var vm="off",lastS="",lastT="";
 function speak(t){if(vm==="off"||!window.speechSynthesis)return;try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t),bn=vm==="bn",vs=speechSynthesis.getVoices().filter(function(v){return v.lang&&v.lang.toLowerCase().indexOf(bn?"bn":"en")===0});u.lang=vs[0]?vs[0].lang:(bn?"bn-IN":"en-US");if(vs[0])u.voice=vs[0];u.rate=.95;speechSynthesis.speak(u)}catch(e){}}
 function sess(){if($("ws").hidden)return;var ph=($("wsp").textContent||"").trim(),nm=($("wsn").textContent||"").trim(),bn=($("wsb").textContent||"").trim(),k=ph+"|"+nm;if(k===lastS)return;lastS=k;var b=vm==="bn";
 if(ph==="REST")speak(b?"বিশ্রাম। "+nm.replace(/^NEXT:\s*/,"পরের: "):"Rest. "+nm.replace(/^NEXT:\s*/,"Next: "));else speak(b&&bn?nm+". "+bn+". শুরু করুন":nm+". Hold the pose.")}
@@ -1243,7 +1252,7 @@ function cd(){var t=($("wst").textContent||"").trim();if(t===lastT)return;lastT=
 new MutationObserver(cd).observe($("wst"),{childList:true,characterData:true,subtree:true});
 new MutationObserver(function(){if($("ws").hidden){lastS=lastT="";try{speechSynthesis.cancel()}catch(e){}}else sess()}).observe($("ws"),{attributes:true,attributeFilter:["hidden"]});
 /* ===== background music (generated, original) ===== */
-var mAC=null,mG=null,mI=0,mOn=ls("arise_music")==="1",mPlay=false,mNext=0,mBar=0,entered=0,CH=[[220,1.189],[174.6,1.26],[261.6,1.26],[196,1.26]];
+var mAC=null,mG=null,mI=0,mOn=false,mPlay=false,mNext=0,mBar=0,entered=0,CH=[[220,1.189],[174.6,1.26],[261.6,1.26],[196,1.26]];
 function mn(type,f,t,d,v){var o=mAC.createOscillator(),g=mAC.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+Math.min(.8,d/3));g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(mG);o.start(t);o.stop(t+d+.1)}
 function msched(){if(!mPlay)return;while(mNext<mAC.currentTime+1.6){var c=CH[mBar%4],r=c[0],t=mNext,tones=[r,r*c[1],r*1.498];tones.forEach(function(f){mn("triangle",f,t,4.4,.07)});mn("sine",r/2,t,4.4,.16);
 for(var i=0;i<8;i++){var f=tones[[0,1,2,1,0,2,1,2][i]]*2;mn("triangle",f,t+i*.45,.5,.05)}mNext+=3.6;mBar++}}
@@ -1255,13 +1264,78 @@ document.addEventListener("arise-enter",function(){entered=1;setTimeout(mAuto,42
 new MutationObserver(mAuto).observe(cut,{attributes:true,attributeFilter:["hidden"]});
 document.addEventListener("visibilitychange",function(){if(document.hidden)mStop();else mAuto()});
 /* ===== hub tiles ===== */
-var TL=[["👤","PROFILE","prof"],["🛒","SHOP","shop"],["🌳","SKILL TREE","tree"],["⚔","GATE RUSH","gate"],["📋","MY ROUTINE","rtn"],["📈","TRACKERS","trk"],["📅","CALENDAR","cal"],["📄","REPORT","rep"],["⏰","REMINDER","rem"],["🗣","VOICE","voice"],["🎵","MUSIC","music"]];
-function tiles(){$("hubg").innerHTML=TL.map(function(t){var on=t[2]==="voice"?vm!=="off":t[2]==="music"?mOn:false,lab=t[2]==="voice"?"VOICE: "+vm.toUpperCase():t[2]==="music"?"MUSIC: "+(mOn?"ON":"OFF"):t[1];return '<button type="button" data-t="'+t[2]+'" class="'+(on?"on":"")+'"><span>'+t[0]+'</span>'+lab+'</button>'}).join("")}
+var TL=[["👤","PROFILE","prof"],["🛒","SHOP","shop"],["🌳","SKILL TREE","tree"],["⚔","GATE RUSH","gate"],["📋","MY ROUTINE","rtn"],["📈","TRACKERS","trk"],["📅","CALENDAR","cal"],["📄","REPORT","rep"],["⏰","REMINDER","rem"],["🎵","MUSIC","music"]];
+function tiles(){$("hubg").innerHTML=TL.map(function(t){var on=t[2]==="music"?!!(window.ariseMusic&&ariseMusic.playing()):false,lab=t[2]==="music"?"MUSIC: "+(on?"ON":"OFF"):t[1];return '<button type="button" data-t="'+t[2]+'" class="'+(on?"on":"")+'"><span>'+t[0]+'</span>'+lab+'</button>'}).join("")}
 $("hubg").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;sfx("tick");var t=b.dataset.t;
 if(t==="prof")rProf();else if(t==="shop")rShop();else if(t==="tree")rTree();else if(t==="gate")rGate();else if(t==="rtn")rRt();else if(t==="trk")rTr();else if(t==="cal")rCal();else if(t==="rep")rRep();else if(t==="rem")rRem();
-else if(t==="voice"){vm=vm==="off"?"en":vm==="en"?"bn":"off";ls("arise_voice",vm);tiles();if(vm!=="off")speak(vm==="bn"?"ভয়েস গাইড চালু":"Voice guide on");else try{speechSynthesis.cancel()}catch(e){}}
-else if(t==="music"){mOn=!mOn;ls("arise_music",mOn?"1":"0");if(mOn)mStart();else mStop();tiles()}});
-applyAll();cdraw();tiles();
+else if(t==="music"){window.ariseMusic&&ariseMusic.open()}});
+document.addEventListener("arise-music",tiles);applyAll();cdraw();tiles();
+})();
+</script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},au=new Audio();au.preload="auto";
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function fmt(t){if(!isFinite(t))return"0:00";t=Math.floor(t);return Math.floor(t/60)+":"+("0"+t%60).slice(-2)}
+function mb(n){return n>=1048576?(n/1048576).toFixed(1)+" MB":Math.max(1,Math.round(n/1024))+" KB"}
+var P={};try{P=JSON.parse(ls("arise_mus")||"{}")||{}}catch(e){P={}}
+function sv(){ls("arise_mus",JSON.stringify(P))}
+if(P.vol==null)P.vol=.8;au.volume=P.vol;
+/* ---- storage: IndexedDB keeps every song on this phone ---- */
+var DB=null;function db(){return DB||(DB=new Promise(function(res,rej){if(!window.indexedDB)return rej(new Error("no idb"));var r=indexedDB.open("arise-music",1);r.onupgradeneeded=function(){var d=r.result;d.createObjectStore("meta",{keyPath:"id",autoIncrement:true});d.createObjectStore("blob")};r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)}}))}
+function tx(st,mode,fn){return db().then(function(d){return new Promise(function(res,rej){var t=d.transaction(st,mode),o=fn(t);t.oncomplete=function(){res(o&&"result" in o?o.result:o)};t.onerror=t.onabort=function(){rej(t.error||new Error("storage error"))}})})}
+var L=[],ix=-1,shown=false,url=null,hist=[],note="";
+function load(){return tx("meta","readonly",function(t){return t.objectStore("meta").getAll()}).then(function(a){L=(a||[]).sort(function(x,y){return x.id-y.id});return L}).catch(function(){L=[];return L})}
+function addFiles(files){var arr=[].slice.call(files).filter(function(f){return /^audio\//.test(f.type)||/\.(mp3|m4a|aac|wav|ogg|opus|flac|webm|amr)$/i.test(f.name)});if(!arr.length){note="No audio files selected";ui();return}
+note="Saving "+arr.length+"...";ui();var ok=0,fail=0;
+return arr.reduce(function(p,f){return p.then(function(){return tx(["meta","blob"],"readwrite",function(t){var m=t.objectStore("meta"),r=m.add({name:f.name.replace(/\.[^.]+$/,""),size:f.size,type:f.type||"audio/mpeg",added:Date.now()});r.onsuccess=function(){t.objectStore("blob").put(f,r.result)};return r}).then(function(){ok++}).catch(function(){fail++})})},Promise.resolve()).then(load).then(function(){note=ok+" song"+(ok==1?"":"s")+" saved"+(fail?" · "+fail+" failed (storage full?)":"");try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}ui();bus()})}
+function del(id){return tx(["meta","blob"],"readwrite",function(t){t.objectStore("meta").delete(id);t.objectStore("blob").delete(id);return {}}).then(load).then(function(){var c=L[ix];if(!c||cid!==c.id){/* current song removed */}})}
+var cid=null;
+function bus(){document.dispatchEvent(new Event("arise-music"))}
+/* ---- playback ---- */
+function playAt(i,fromHist){if(!L.length)return;if(i<0)i=L.length-1;if(i>=L.length)i=0;if(!fromHist&&ix>=0&&ix!==i){hist.push(ix);if(hist.length>60)hist.shift()}
+ix=i;var m=L[i];cid=m.id;P.last=m.id;P.on=true;sv();
+return tx("blob","readonly",function(t){return t.objectStore("blob").get(m.id)}).then(function(b){if(!b)throw 0;if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(b);au.src=url;return au.play()}).then(function(){meta();ui();bus()}).catch(function(){note="Could not play “"+m.name+"”";ui()})}
+function next(auto){if(!L.length)return;if(auto&&P.rep==="one"){au.currentTime=0;au.play();return}
+var n;if(P.shuf&&L.length>1){do{n=Math.floor(Math.random()*L.length)}while(n===ix)}else{n=ix+1;if(n>=L.length){if(auto&&P.rep!=="all"){au.pause();P.on=false;sv();ui();bus();return}n=0}}playAt(n)}
+function prev(){if(!L.length)return;if(au.currentTime>3){au.currentTime=0;return}if(hist.length){playAt(hist.pop(),true)}else playAt(ix<=0?L.length-1:ix-1,true)}
+function toggle(){if(!L.length)return;if(ix<0||!au.src){playAt(P.last?Math.max(0,L.findIndex(function(m){return m.id===P.last})):0);return}if(au.paused){au.play().then(function(){P.on=true;sv()}).catch(function(){})}else{au.pause();P.on=false;sv()}}
+au.addEventListener("ended",function(){next(true)});
+au.addEventListener("play",function(){bus();ui(true)});au.addEventListener("pause",function(){bus();ui(true)});
+au.addEventListener("timeupdate",tick);au.addEventListener("loadedmetadata",tick);
+function tick(){if(!shown)return;var s=$("mu-s"),a=$("mu-a"),d=$("mu-d");if(!s)return;a.textContent=fmt(au.currentTime);d.textContent=fmt(au.duration);if(!s.dataset.drag){s.max=isFinite(au.duration)?au.duration:0;s.value=au.currentTime}}
+function meta(){if(!("mediaSession" in navigator)||ix<0)return;try{navigator.mediaSession.metadata=new MediaMetadata({title:L[ix].name,artist:"ARISE",album:"My Songs"});var h=navigator.mediaSession.setActionHandler.bind(navigator.mediaSession);h("play",function(){toggle()});h("pause",function(){toggle()});h("nexttrack",function(){next()});h("previoustrack",function(){prev()});h("seekto",function(e){if(e.seekTime!=null)au.currentTime=e.seekTime})}catch(e){}}
+/* ---- sheet UI ---- */
+function ui(soft){if(!shown)return;var tot=L.reduce(function(a,m){return a+(m.size||0)},0),pl=!au.paused&&au.src;
+var cur=L[ix],h='<div class="mu-now"><div class="mu-ti">'+(cur?esc(cur.name):(L.length?"Pick a song":"No songs yet"))+'</div><div class="mu-sub">'+(pl?"NOW PLAYING":cur?"PAUSED":"MY SONGS")+'</div>'+
+'<div class="mu-seek"><span id="mu-a">0:00</span><input id="mu-s" type="range" min="0" max="0" step="0.1" value="0"><span id="mu-d">0:00</span></div>'+
+'<div class="mu-ctl"><button type="button" data-m="shuf" class="'+(P.shuf?"on":"")+'" aria-label="Shuffle">🔀</button><button type="button" data-m="prev" aria-label="Previous">⏮</button><button type="button" data-m="pp" class="pp" aria-label="Play or pause">'+(pl?"⏸":"▶")+'</button><button type="button" data-m="next" aria-label="Next">⏭</button><button type="button" data-m="rep" class="'+(P.rep&&P.rep!=="off"?"on":"")+'" aria-label="Repeat">'+(P.rep==="one"?"🔂":"🔁")+'</button></div>'+
+'<div class="mu-vol"><span>🔈</span><input id="mu-v" type="range" min="0" max="1" step="0.02" value="'+au.volume+'"><span>🔊</span></div></div>'+
+'<button type="button" class="mu-add" data-m="add">➕ ADD SONGS FROM PHONE</button><input id="mu-f" type="file" accept="audio/*,.mp3,.m4a,.aac,.wav,.ogg,.opus,.flac" multiple hidden>'+
+'<div class="mu-info">'+L.length+' SONG'+(L.length==1?"":"S")+' · '+mb(tot)+' SAVED ON THIS PHONE'+(note?' · '+esc(note):'')+'</div>';
+if(!L.length)h+='<div class="mu-empty">Tap “ADD SONGS” and pick as many songs as you like from your phone. They stay saved inside the app.</div>';
+else{L.forEach(function(m,i){h+='<div class="mu-row'+(i===ix?" cur":"")+'"><button type="button" class="pl" data-m="play" data-i="'+i+'"><em>'+(i===ix&&pl?"♪":(i+1))+'</em><span>'+esc(m.name)+'</span></button><small>'+mb(m.size||0)+'</small><button type="button" class="dl" data-m="del" data-id="'+m.id+'" aria-label="Delete">🗑</button></div>'});
+h+='<button type="button" class="mu-clr" data-m="clr">DELETE ALL SONGS</button>'}
+if(soft&&$("mu-s")){/* keep slider/volume untouched while playing */ }
+$("hbb").innerHTML=h;tick()}
+function open(){shown=true;$("hbt").textContent="MY MUSIC";$("hbb").innerHTML="";$("hub").hidden=false;$("hub").scrollTop=0;load().then(function(){ix=cid==null?-1:L.findIndex(function(m){return m.id===cid});ui()})}
+new MutationObserver(function(){if($("hub").hidden)shown=false}).observe($("hub"),{attributes:true,attributeFilter:["hidden"]});
+$("hubg").addEventListener("click",function(e){var b=e.target.closest("button");if(b&&b.dataset.t&&b.dataset.t!=="music")shown=false},true);
+$("hbb").addEventListener("click",function(e){if(!shown)return;var b=e.target.closest("[data-m]");if(!b)return;var m=b.dataset.m;
+if(m==="pp")toggle();else if(m==="next")next();else if(m==="prev")prev();else if(m==="shuf"){P.shuf=!P.shuf;sv();ui()}
+else if(m==="rep"){P.rep=P.rep==="all"?"one":P.rep==="one"?"off":"all";sv();ui()}
+else if(m==="add")$("mu-f").click();else if(m==="play")playAt(+b.dataset.i);
+else if(m==="del"){var id=+b.dataset.id,was=L[ix]&&L[ix].id===id;del(id).then(function(){if(was){au.pause();au.removeAttribute("src");ix=-1;cid=null}else ix=cid==null?-1:L.findIndex(function(x){return x.id===cid});ui();bus()})}
+else if(m==="clr"){if(confirm("Delete all saved songs?")){au.pause();au.removeAttribute("src");ix=-1;cid=null;P.on=false;sv();Promise.all(L.map(function(x){return del(x.id)})).then(function(){ui();bus()})}}});
+$("hbb").addEventListener("change",function(e){if(!shown)return;if(e.target.id==="mu-f"&&e.target.files.length){addFiles(e.target.files);e.target.value=""}});
+$("hbb").addEventListener("input",function(e){if(!shown)return;if(e.target.id==="mu-v"){au.volume=+e.target.value;P.vol=au.volume;sv()}else if(e.target.id==="mu-s"){e.target.dataset.drag="1";$("mu-a").textContent=fmt(+e.target.value)}});
+$("hbb").addEventListener("change",function(e){if(shown&&e.target.id==="mu-s"){au.currentTime=+e.target.value;delete e.target.dataset.drag}});
+window.ariseMusic={open:open,playing:function(){return !!au.src&&!au.paused}};
+/* resume the last song after the intro if it was playing when the app was closed */
+function resume(){if(!P.on)return;load().then(function(){if(!L.length||au.src)return;var i=P.last?L.findIndex(function(m){return m.id===P.last}):0;playAt(i<0?0:i).catch(function(){})})}
+var cut=$("cut"),ent=0;document.addEventListener("arise-enter",function(){ent=1;setTimeout(function(){if(cut.hidden)resume()},4500)});
+new MutationObserver(function(){if(ent&&cut.hidden)resume()}).observe(cut,{attributes:true,attributeFilter:["hidden"]});
 })();
 </script>
 </body></html>
