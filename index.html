@@ -540,28 +540,76 @@ body[data-th="emerald"] .flare{background:radial-gradient(circle,rgba(155,255,20
 body[data-au="gold"]{--auc:#ffd36b}body[data-au="violet"]{--auc:#b79bff}body[data-au="fire"]{--auc:#ff6a2a}
 body[data-au] .aura i:nth-child(1){border:2px solid var(--auc);box-shadow:0 0 18px var(--auc)}body[data-au] .aura i:nth-child(2){border-color:var(--auc)}
 body[data-au] .emb{filter:drop-shadow(0 0 14px var(--auc))}
-</style><style id="arise-hub2">#hub .cl{position:absolute;right:12px;top:10px;width:44px;height:44px;background:none;border:0;color:#9fc4ff;font-size:22px}#hbt{font:800 14px Bungee,Orbitron,sans-serif;letter-spacing:.25em;color:#c6b3ff}</style><style id="arise-music">
-.mu-now{padding:14px;border:1px solid rgba(255,60,157,.5);border-left:3px solid var(--pink);background:linear-gradient(165deg,#1a0a33,#07122b);border-radius:2px;text-align:center}
-.mu-ti{font:400 17px Bungee,Orbitron,sans-serif;color:#fff;line-height:1.25;min-height:44px;word-break:break-word}
-.mu-sub{font:700 11px Rajdhani,sans-serif;letter-spacing:.2em;color:#ffd9a0;margin-top:2px}
-.mu-seek{display:flex;align-items:center;gap:8px;margin:12px 0 4px;font:700 12px Rajdhani,sans-serif;color:#9fc4ff}
+</style><style id="arise-hub2">#hub .cl{position:absolute;right:12px;top:10px;width:44px;height:44px;background:none;border:0;color:#9fc4ff;font-size:22px}#hbt{font:800 14px Bungee,Orbitron,sans-serif;letter-spacing:.25em;color:#c6b3ff}</style><style id="arise-pack">
+@keyframes mspin{to{transform:rotate(360deg)}}@keyframes mq{0%,100%{transform:scaleY(.2)}50%{transform:scaleY(1)}}
+#hub.mu{background:radial-gradient(520px 380px at 50% 0,rgba(255,60,157,.30),transparent 70%),radial-gradient(520px 420px at 100% 55%,rgba(60,200,255,.18),transparent 70%),radial-gradient(480px 360px at 0 85%,rgba(138,92,255,.22),transparent 70%),#05020f!important}
+.mu-hero{position:relative;display:flex;flex-direction:column;align-items:center;padding:6px 0 0}
+.mu-disc{--h:320;position:relative;width:196px;height:196px;border-radius:50%;background:repeating-radial-gradient(circle at 50% 50%,#08080f 0 2px,#17172c 2px 4px);box-shadow:0 0 0 6px rgba(255,255,255,.05),0 14px 54px hsla(var(--h),90%,55%,.6);animation:mspin 7s linear infinite;animation-play-state:paused}
+.mu-disc.play{animation-play-state:running}
+.mu-disc::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 20deg,transparent 0 18%,rgba(255,255,255,.16) 24%,transparent 30% 68%,rgba(255,255,255,.12) 74%,transparent 80%)}
+.mu-lab{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:linear-gradient(135deg,hsl(var(--h) 90% 62%),hsl(calc(var(--h) + 55) 92% 52%));display:grid;place-items:center;box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)}
+.mu-lab b{font:400 26px Bungee,Orbitron,sans-serif;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.mu-lab::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#05020f}
+.mu-eq{display:flex;gap:4px;align-items:flex-end;height:24px;margin:12px 0 2px}
+.mu-eq i{width:5px;height:24px;background:linear-gradient(180deg,#ffd36b,#ff3c9d);transform-origin:bottom;transform:scaleY(.2);border-radius:2px}
+.mu-eq.on i{animation:mq .9s ease-in-out infinite}.mu-eq i:nth-child(2){animation-delay:-.3s!important}.mu-eq i:nth-child(3){animation-delay:-.6s!important;animation-duration:.7s!important}.mu-eq i:nth-child(4){animation-delay:-.15s!important}.mu-eq i:nth-child(5){animation-delay:-.45s!important;animation-duration:1.1s!important}
+.mu-ti{font:400 19px Bungee,Orbitron,sans-serif;color:#fff;line-height:1.25;min-height:48px;text-align:center;word-break:break-word;padding:0 8px;text-shadow:0 0 18px rgba(255,60,157,.55)}
+.mu-sub{text-align:center;font:700 11px Rajdhani,sans-serif;letter-spacing:.3em;color:#ffd9a0}
+.mu-seek{display:flex;align-items:center;gap:8px;margin:14px 2px 4px;font:700 12px Rajdhani,sans-serif;color:#9fc4ff}
 .mu-seek input,.mu-vol input{flex:1;min-width:0;accent-color:#ff3c9d;height:28px}
 .mu-ctl{display:flex;justify-content:center;gap:10px;align-items:center;margin-top:6px}
-.mu-ctl button{width:48px;height:48px;border-radius:50%;background:#0b1b3c;border:1px solid rgba(60,200,255,.5);color:#cde8ff;font-size:18px}
-.mu-ctl .pp{width:64px;height:64px;background:linear-gradient(135deg,var(--pink),var(--orange));border:0;color:#fff;font-size:24px;box-shadow:0 0 18px rgba(255,60,157,.6)}
-.mu-ctl .on{border-color:var(--pink);color:#ffd36b;background:#2a0f3d}
-.mu-vol{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:16px}
-.mu-add{display:block;width:100%;min-height:50px;margin:14px 0 6px;background:linear-gradient(90deg,var(--cyan),var(--violet));border:0;color:#fff;font:700 15px Rajdhani,sans-serif;letter-spacing:.2em;border-radius:2px}
-.mu-info{font:700 12px Rajdhani,sans-serif;letter-spacing:.14em;color:#9fc4ff;margin:2px 0 8px}
-.mu-row{display:flex;align-items:center;gap:8px;min-height:50px;padding:6px 8px;margin-bottom:5px;background:#07122b;border:1px solid rgba(60,200,255,.2);border-radius:2px}
-.mu-row.cur{border-color:var(--pink);background:linear-gradient(90deg,rgba(255,60,157,.18),#07122b)}
-.mu-row .pl{flex:1;min-width:0;text-align:left;background:none;border:0;color:#e6f4ff;font:700 15px Rajdhani,'Hind Siliguri',sans-serif;padding:6px 4px;display:flex;gap:8px;align-items:center}
-.mu-row .pl span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mu-row .pl em{flex:none;font-style:normal;color:#ff9ad0;font-size:13px;min-width:18px}
-.mu-row small{flex:none;color:#7f98c4;font:700 11px Rajdhani,sans-serif}
-.mu-row .dl{flex:none;width:38px;height:38px;background:none;border:0;color:#ff7a8a;font-size:17px}
-.mu-empty{padding:22px 10px;text-align:center;font:600 15px Rajdhani,'Hind Siliguri',sans-serif;color:#9fc4ff;border:1px dashed rgba(60,200,255,.35);border-radius:2px}
-.mu-clr{display:block;margin:10px auto 0;background:none;border:0;color:#ff7a8a;font:700 12px Rajdhani,sans-serif;letter-spacing:.16em}
-</style></head><body>
+.mu-ctl button{width:46px;height:46px;border-radius:50%;background:rgba(12,22,50,.85);border:1px solid rgba(143,230,255,.45);color:#cde8ff;font-size:17px}
+.mu-ctl .pp{width:68px;height:68px;background:linear-gradient(135deg,#ff3c9d,#ff7a3c);border:0;color:#fff;font-size:26px;box-shadow:0 0 24px rgba(255,60,157,.7)}
+.mu-ctl .on{border-color:#ff3c9d;color:#ffd36b;background:#2a0f3d}
+.mu-ex{display:flex;align-items:center;gap:10px;margin-top:10px}
+.mu-vol{flex:1;display:flex;align-items:center;gap:6px;font-size:15px}
+.mu-sl{flex:none;min-height:38px;padding:0 12px;background:rgba(12,22,50,.85);border:1px solid rgba(143,230,255,.4);color:#cde8ff;font:700 12px Rajdhani,sans-serif;letter-spacing:.1em;border-radius:20px}.mu-sl.on{border-color:#ff3c9d;color:#ffd36b}
+.mu-add{display:block;width:100%;min-height:52px;margin:16px 0 8px;background:linear-gradient(90deg,#3cc8ff,#8a5cff,#ff3c9d);border:0;color:#fff;font:700 15px Rajdhani,sans-serif;letter-spacing:.2em;border-radius:26px;box-shadow:0 8px 26px rgba(138,92,255,.5)}
+.mu-prot{display:block;width:100%;text-align:center;padding:8px 10px;border-radius:2px;font:700 12px Rajdhani,sans-serif;letter-spacing:.1em;background:rgba(166,226,46,.10);border:1px solid rgba(166,226,46,.45);color:#caff6b}
+.mu-prot.bad{background:rgba(255,154,60,.10);border-color:rgba(255,154,60,.55);color:#ffc78a}
+.mu-info{font:700 12px Rajdhani,sans-serif;letter-spacing:.14em;color:#9fc4ff;margin:10px 2px 8px}
+.mu-q{width:100%;box-sizing:border-box;min-height:42px;margin-bottom:8px;padding:0 14px;background:rgba(12,22,50,.85);border:1px solid rgba(143,230,255,.3);border-radius:21px;color:#fff;font:600 15px Rajdhani,'Hind Siliguri',sans-serif;outline:none}
+.mu-row{display:flex;align-items:center;gap:6px;min-height:56px;padding:4px 6px;margin-bottom:6px;background:linear-gradient(90deg,rgba(18,30,66,.9),rgba(8,14,34,.9));border:1px solid rgba(143,230,255,.16);border-left:3px solid hsl(var(--h) 90% 60%);border-radius:10px}
+.mu-row.cur{border-color:#ff3c9d;background:linear-gradient(90deg,rgba(255,60,157,.22),rgba(8,14,34,.9));box-shadow:0 0 18px rgba(255,60,157,.25)}
+.mu-row.hid{display:none}
+.mu-row .pl{flex:1;min-width:0;text-align:left;background:none;border:0;color:#e6f4ff;font:700 15px Rajdhani,'Hind Siliguri',sans-serif;padding:6px 4px;display:flex;gap:10px;align-items:center}
+.mu-row .pl .n{flex:none;width:22px;text-align:center;color:#ff9ad0;font-size:13px}
+.mu-row .pl .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mu-row small{flex:none;color:#8fa6cf;font:700 11px Rajdhani,sans-serif;text-align:right;line-height:1.2}
+.mu-row .dl{flex:none;width:40px;height:40px;background:none;border:0;color:#ff7a8a;font-size:17px}
+.mu-row .mu-eq{margin:0;height:16px}.mu-row .mu-eq i{width:3px;height:16px}
+.mu-empty{padding:26px 14px;text-align:center;font:600 15px Rajdhani,'Hind Siliguri',sans-serif;color:#9fc4ff;border:1px dashed rgba(143,230,255,.4);border-radius:12px;line-height:1.5}
+.mu-undo{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;padding:10px 12px;background:#2a0f3d;border:1px solid #ff3c9d;border-radius:8px;font:700 13px Rajdhani,'Hind Siliguri',sans-serif;color:#ffd9a0}
+.mu-undo button{min-height:34px;padding:0 14px;background:linear-gradient(90deg,#ff3c9d,#ff7a3c);border:0;color:#fff;font:700 13px Rajdhani,sans-serif;letter-spacing:.12em;border-radius:17px}
+.mu-clr{display:block;margin:12px auto 0;background:none;border:0;color:#ff7a8a;font:700 12px Rajdhani,sans-serif;letter-spacing:.16em;min-height:40px}
+#mmini{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:45;display:flex;align-items:center;gap:6px;padding:6px 8px;border-radius:30px;background:linear-gradient(90deg,#1a0a33,#0b1b3c);border:1px solid rgba(255,60,157,.6);box-shadow:0 8px 30px rgba(0,0,0,.6),0 0 18px rgba(255,60,157,.3);overflow:hidden}
+#mmini[hidden]{display:none}
+#mmini .md{--h:320;flex:none;width:38px;height:38px;border-radius:50%;background:repeating-radial-gradient(circle,#08080f 0 1px,#1c1c34 1px 3px);position:relative;animation:mspin 5s linear infinite;animation-play-state:paused}
+#mmini .md.play{animation-play-state:running}
+#mmini .md::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:linear-gradient(135deg,hsl(var(--h) 90% 62%),hsl(calc(var(--h) + 55) 92% 52%))}
+#mmini .mt{flex:1;min-width:0;text-align:left;background:none;border:0;color:#fff;padding:0 4px;font:700 14px Rajdhani,'Hind Siliguri',sans-serif;line-height:1.15}
+#mmini .mt b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}#mmini .mt small{display:block;color:#ff9ad0;font-size:10px;letter-spacing:.2em}
+#mmini button.c{flex:none;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);border:0;color:#fff;font-size:15px}
+#mmini .pp2{background:linear-gradient(135deg,#ff3c9d,#ff7a3c)!important}
+#mmini .bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:rgba(255,255,255,.1)}#mmini .bar u{display:block;height:100%;width:0;background:linear-gradient(90deg,#3cc8ff,#ff3c9d)}
+html.mini .wrap{padding-bottom:90px}
+.inf{flex:none;margin-left:6px;width:26px;height:26px;border-radius:50%;background:rgba(60,200,255,.12);border:1px solid rgba(60,200,255,.5);color:#8fe6ff;font:700 14px Rajdhani,sans-serif;line-height:1;vertical-align:middle;padding:0}
+.vid.mine{border-color:#a6e22e}
+.dt-h{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.dt-h span{padding:4px 10px;border:1px solid rgba(60,200,255,.4);border-radius:14px;font:700 11px Rajdhani,sans-serif;letter-spacing:.12em;color:#8fe6ff}.dt-h .g{border-color:#ff3c9d;color:#ffb0d0}
+.dt-bn{font:600 20px 'Hind Siliguri',Rajdhani,sans-serif;color:#ffd9a0;margin:0 0 12px}
+.dt-b{padding:12px;margin-bottom:10px;background:#07122b;border:1px solid rgba(60,200,255,.22);border-left:3px solid #3cc8ff;border-radius:2px;font:600 15px Rajdhani,'Hind Siliguri',sans-serif;line-height:1.5;color:#dcebff}
+.dt-b h4{margin:0 0 4px;font:700 11px Rajdhani,sans-serif;letter-spacing:.24em;color:#8fe6ff}
+.dt-b.w{border-left-color:#ff9a3c}.dt-b.w h4{color:#ffc78a}
+.dt-b input{width:100%;box-sizing:border-box;min-height:44px;margin:6px 0;padding:0 12px;background:#0b1b3c;border:1px solid rgba(60,200,255,.45);color:#fff;font:600 14px Rajdhani,sans-serif;border-radius:2px}
+.dt-r{display:flex;gap:8px;flex-wrap:wrap}.dt-r button{flex:1;min-height:44px;background:#0b1b3c;border:1px solid rgba(60,200,255,.5);color:#cde8ff;font:700 13px Rajdhani,sans-serif;letter-spacing:.1em;border-radius:2px}
+.dt-r .pk{background:linear-gradient(90deg,#ff3c9d,#ff7a3c);border:0;color:#fff}
+.sf-r{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid rgba(60,200,255,.15);font:700 13px Rajdhani,sans-serif;letter-spacing:.08em;color:#9fc4ff}.sf-r b{color:#fff;text-align:right}
+html.lite *,html.lite *::before,html.lite *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html.lite::after,html.lite .aura,html.lite .shock,html.lite .flare{display:none!important}
+html.lite .scene svg{will-change:auto}
+#litb.act{background:linear-gradient(90deg,#a6e22e,#3cc8ff);color:#04121f;border-color:transparent}
+</style><style id="arise-fix">.mu-sec{font:700 11px Rajdhani,sans-serif;letter-spacing:.3em;color:#c6b3ff;margin:16px 0 6px}.mu-row .rs{color:#8fe6ff}</style></head><body>
 <div id="cut" hidden aria-hidden="true"><div class="nmx"><i class="fl2"></i><small>PLAYER</small><h3 data-t="SUBHAJIT">SUBHAJIT</h3><span>THE HUNTER AWAKENS</span><i class="swp"></i></div><div class="cs" id="cs">
 <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
 <defs><radialGradient id="gv"><stop offset="0" stop-color="#8a5cff" stop-opacity=".75"/><stop offset="1" stop-color="#8a5cff" stop-opacity="0"/></radialGradient>
@@ -639,7 +687,7 @@ body[data-au] .emb{filter:drop-shadow(0 0 14px var(--auc))}
   <nav class="tabs" id="tabs" aria-label="Filter"></nav>
   <div class="mods" id="mods"></div>
 
-  <div class="tools" id="tools"><button class="cutbtn" id="scb" type="button">🖼 STATUS CARD</button><button class="cutbtn" id="rtb" type="button">⏱ REST TIMER</button><button class="cutbtn" id="awk" type="button">🔆 STAY AWAKE</button><button class="cutbtn" id="blb" type="button">⚖ BODY LOG</button><button class="cutbtn" id="ins" type="button" hidden>⬇ INSTALL</button></div>
+  <div class="tools" id="tools"><button class="cutbtn" id="scb" type="button">🖼 STATUS CARD</button><button class="cutbtn" id="rtb" type="button">⏱ REST TIMER</button><button class="cutbtn" id="litb" type="button">⚡ LITE MODE</button><button class="cutbtn" id="awk" type="button">🔆 STAY AWAKE</button><button class="cutbtn" id="blb" type="button">⚖ BODY LOG</button><button class="cutbtn" id="ins" type="button" hidden>⬇ INSTALL</button></div>
   <div class="foot"><span>[ SYSTEM LOG: 92 / 92 SYNCED ]</span><button class="cutbtn" id="cutbtn" type="button">▶ INTRO</button><button class="reset" id="reset" type="button">RESET</button></div>
 </div>
 
@@ -1264,78 +1312,165 @@ document.addEventListener("arise-enter",function(){entered=1;setTimeout(mAuto,42
 new MutationObserver(mAuto).observe(cut,{attributes:true,attributeFilter:["hidden"]});
 document.addEventListener("visibilitychange",function(){if(document.hidden)mStop();else mAuto()});
 /* ===== hub tiles ===== */
-var TL=[["👤","PROFILE","prof"],["🛒","SHOP","shop"],["🌳","SKILL TREE","tree"],["⚔","GATE RUSH","gate"],["📋","MY ROUTINE","rtn"],["📈","TRACKERS","trk"],["📅","CALENDAR","cal"],["📄","REPORT","rep"],["⏰","REMINDER","rem"],["🎵","MUSIC","music"]];
-function tiles(){$("hubg").innerHTML=TL.map(function(t){var on=t[2]==="music"?!!(window.ariseMusic&&ariseMusic.playing()):false,lab=t[2]==="music"?"MUSIC: "+(on?"ON":"OFF"):t[1];return '<button type="button" data-t="'+t[2]+'" class="'+(on?"on":"")+'"><span>'+t[0]+'</span>'+lab+'</button>'}).join("")}
+var TL=[["👤","PROFILE","prof"],["🛒","SHOP","shop"],["🌳","SKILL TREE","tree"],["⚔","GATE RUSH","gate"],["📋","MY ROUTINE","rtn"],["📈","TRACKERS","trk"],["📅","CALENDAR","cal"],["📄","REPORT","rep"],["⏰","REMINDER","rem"],["🎵","MUSIC","music"],["🔒","SAFE DATA","safe"]];
+function tiles(){$("hubg").innerHTML=TL.map(function(t){var od=t[2]==="safe"&&window.ariseSafe&&ariseSafe.overdue(),on=t[2]==="music"?!!(window.ariseMusic&&ariseMusic.playing()):!!od,lab=t[2]==="music"?"MUSIC: "+(on?"ON":"OFF"):od?"SAFE DATA ⚠":t[1];return '<button type="button" data-t="'+t[2]+'" class="'+(on?"on":"")+'"><span>'+t[0]+'</span>'+lab+'</button>'}).join("")}
 $("hubg").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;sfx("tick");var t=b.dataset.t;
 if(t==="prof")rProf();else if(t==="shop")rShop();else if(t==="tree")rTree();else if(t==="gate")rGate();else if(t==="rtn")rRt();else if(t==="trk")rTr();else if(t==="cal")rCal();else if(t==="rep")rRep();else if(t==="rem")rRem();
-else if(t==="music"){window.ariseMusic&&ariseMusic.open()}});
+else if(t==="music"){window.ariseMusic&&ariseMusic.open()}else if(t==="safe"){window.ariseSafe&&ariseSafe.open()}});
 document.addEventListener("arise-music",tiles);applyAll();cdraw();tiles();
 })();
 </script>
+
 <script>
 (function(){
 var $=function(i){return document.getElementById(i)},au=new Audio();au.preload="auto";
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function fmt(t){if(!isFinite(t))return"0:00";t=Math.floor(t);return Math.floor(t/60)+":"+("0"+t%60).slice(-2)}
+function fmt(t){if(!isFinite(t)||t<=0)return"0:00";t=Math.floor(t);return Math.floor(t/60)+":"+("0"+t%60).slice(-2)}
 function mb(n){return n>=1048576?(n/1048576).toFixed(1)+" MB":Math.max(1,Math.round(n/1024))+" KB"}
+function hue(n){var h=0;for(var i=0;i<n.length;i++)h=(h*31+n.charCodeAt(i))%360;return h}
 var P={};try{P=JSON.parse(ls("arise_mus")||"{}")||{}}catch(e){P={}}
 function sv(){ls("arise_mus",JSON.stringify(P))}
 if(P.vol==null)P.vol=.8;au.volume=P.vol;
-/* ---- storage: IndexedDB keeps every song on this phone ---- */
+/* ---- IndexedDB: songs live inside the app on this phone ---- */
 var DB=null;function db(){return DB||(DB=new Promise(function(res,rej){if(!window.indexedDB)return rej(new Error("no idb"));var r=indexedDB.open("arise-music",1);r.onupgradeneeded=function(){var d=r.result;d.createObjectStore("meta",{keyPath:"id",autoIncrement:true});d.createObjectStore("blob")};r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)}}))}
 function tx(st,mode,fn){return db().then(function(d){return new Promise(function(res,rej){var t=d.transaction(st,mode),o=fn(t);t.oncomplete=function(){res(o&&"result" in o?o.result:o)};t.onerror=t.onabort=function(){rej(t.error||new Error("storage error"))}})})}
-var L=[],ix=-1,shown=false,url=null,hist=[],note="";
-function load(){return tx("meta","readonly",function(t){return t.objectStore("meta").getAll()}).then(function(a){L=(a||[]).sort(function(x,y){return x.id-y.id});return L}).catch(function(){L=[];return L})}
-function addFiles(files){var arr=[].slice.call(files).filter(function(f){return /^audio\//.test(f.type)||/\.(mp3|m4a|aac|wav|ogg|opus|flac|webm|amr)$/i.test(f.name)});if(!arr.length){note="No audio files selected";ui();return}
-note="Saving "+arr.length+"...";ui();var ok=0,fail=0;
-return arr.reduce(function(p,f){return p.then(function(){return tx(["meta","blob"],"readwrite",function(t){var m=t.objectStore("meta"),r=m.add({name:f.name.replace(/\.[^.]+$/,""),size:f.size,type:f.type||"audio/mpeg",added:Date.now()});r.onsuccess=function(){t.objectStore("blob").put(f,r.result)};return r}).then(function(){ok++}).catch(function(){fail++})})},Promise.resolve()).then(load).then(function(){note=ok+" song"+(ok==1?"":"s")+" saved"+(fail?" · "+fail+" failed (storage full?)":"");try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}ui();bus()})}
-function del(id){return tx(["meta","blob"],"readwrite",function(t){t.objectStore("meta").delete(id);t.objectStore("blob").delete(id);return {}}).then(load).then(function(){var c=L[ix];if(!c||cid!==c.id){/* current song removed */}})}
-var cid=null;
+var L=[],T=[],ix=-1,cid=null,shown=false,url=null,hist=[],note="",pend=null,clrArm=0,slEnd=0,slT=0,slIv=0,mini=null,pst=null;
+function purge(id){return tx(["meta","blob"],"readwrite",function(t){t.objectStore("meta").delete(id);t.objectStore("blob").delete(id);return {}})}
+function load(){return tx("meta","readonly",function(t){return t.objectStore("meta").getAll()}).then(function(a){a=(a||[]).sort(function(x,y){return x.id-y.id});L=a.filter(function(m){return !m.del});T=a.filter(function(m){return m.del});var old=T.filter(function(m){return Date.now()-m.del>2592000000});if(old.length){T=T.filter(function(m){return Date.now()-m.del<=2592000000});old.forEach(function(m){purge(m.id)})}return L}).catch(function(){L=[];T=[];return L})}
 function bus(){document.dispatchEvent(new Event("arise-music"))}
+/* ---- keep songs safe: ask the browser not to clear them ---- */
+function protect(ask){try{if(!navigator.storage||!navigator.storage.persisted)return Promise.resolve(null);return navigator.storage.persisted().then(function(p){if(p||!ask)return p;return navigator.storage.persist()})}catch(e){return Promise.resolve(null)}}
+function pshow(){protect(false).then(function(p){pst=p;var el=$("mu-p");if(!el)return;if(p){el.className="mu-prot";el.textContent="🔒 SONGS PROTECTED · the browser will not delete them"}else{el.className="mu-prot bad";el.textContent=p===null?"⚠ Protection not supported on this browser":"⚠ NOT PROTECTED YET · TAP HERE TO PROTECT"}})}
+function dur(f){return new Promise(function(res){var a=new Audio(),u=URL.createObjectURL(f),d=0;function fin(){if(d)return;d=1;URL.revokeObjectURL(u);res(isFinite(a.duration)?a.duration:0)}a.preload="metadata";a.onloadedmetadata=fin;a.onerror=fin;a.src=u;setTimeout(fin,4000)})}
+function addFiles(files){var arr=[].slice.call(files).filter(function(f){return /^audio\//.test(f.type)||/\.(mp3|m4a|aac|wav|ogg|opus|flac|webm|amr)$/i.test(f.name)});if(!arr.length){note="No audio files selected";ui();return}
+note="Saving "+arr.length+"...";ui();var ok=0,fail=0,dup=0;
+return arr.reduce(function(p,f){return p.then(function(){var nm0=f.name.replace(/\.[^.]+$/,"");if(L.concat(T).some(function(m){return m.name===nm0&&m.size===f.size})){dup++;return}return dur(f).then(function(d){return tx(["meta","blob"],"readwrite",function(t){var r=t.objectStore("meta").add({name:f.name.replace(/\.[^.]+$/,""),size:f.size,type:f.type||"audio/mpeg",dur:d,added:Date.now()});r.onsuccess=function(){t.objectStore("blob").put(f,r.result)};return r})}).then(function(){ok++}).catch(function(){fail++})})},Promise.resolve()).then(load).then(function(){ix=cid==null?-1:L.findIndex(function(m){return m.id===cid});note=ok+" saved"+(dup?" · "+dup+" already saved":"")+(fail?" · "+fail+" failed (storage full?)":"");protect(true).then(function(){ui();bus()})})}
+function commit(){if(!pend)return;clearTimeout(pend.t);var m=pend.m;pend=null;m.del=Date.now();return tx("meta","readwrite",function(t){return t.objectStore("meta").put(m)}).then(function(){T.push(m);if(shown)ui()}).catch(function(){})}
+function rest(id){var m=T.filter(function(x){return x.id===id})[0];if(!m)return;delete m.del;tx("meta","readwrite",function(t){return t.objectStore("meta").put(m)}).then(function(){T=T.filter(function(x){return x.id!==id});L.push(m);L.sort(function(a,b){return a.id-b.id});ix=cid==null?-1:L.findIndex(function(x){return x.id===cid});ui();msync();bus()}).catch(function(){})}
+function forever(id){var m=T.filter(function(x){return x.id===id})[0];if(!m||!confirm("Delete “"+m.name+"” forever?\nThis cannot be undone."))return;purge(id).then(function(){T=T.filter(function(x){return x.id!==id});ui()})}
+function undo(){if(!pend)return;clearTimeout(pend.t);var m=pend.m;pend=null;L.push(m);L.sort(function(a,b){return a.id-b.id});ix=cid==null?-1:L.findIndex(function(x){return x.id===cid});ui();msync()}
+function remove(i){var m=L[i];if(!m)return;commit();var was=m.id===cid;L.splice(i,1);if(was){au.pause();au.removeAttribute("src");cid=null;ix=-1;P.on=false;sv()}else ix=cid==null?-1:L.findIndex(function(x){return x.id===cid});
+pend={m:m,t:setTimeout(commit,7000)};ui();msync();bus()}
 /* ---- playback ---- */
-function playAt(i,fromHist){if(!L.length)return;if(i<0)i=L.length-1;if(i>=L.length)i=0;if(!fromHist&&ix>=0&&ix!==i){hist.push(ix);if(hist.length>60)hist.shift()}
+function playAt(i,fromHist){if(!L.length)return Promise.resolve();if(i<0)i=L.length-1;if(i>=L.length)i=0;if(!fromHist&&ix>=0&&ix!==i){hist.push(cid);if(hist.length>60)hist.shift()}
 ix=i;var m=L[i];cid=m.id;P.last=m.id;P.on=true;sv();
-return tx("blob","readonly",function(t){return t.objectStore("blob").get(m.id)}).then(function(b){if(!b)throw 0;if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(b);au.src=url;return au.play()}).then(function(){meta();ui();bus()}).catch(function(){note="Could not play “"+m.name+"”";ui()})}
+return tx("blob","readonly",function(t){return t.objectStore("blob").get(m.id)}).then(function(b){if(!b)throw 0;if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(b);au.src=url;return au.play()}).then(function(){meta();ui();msync();bus()}).catch(function(){note="Could not play “"+m.name+"”";ui()})}
 function next(auto){if(!L.length)return;if(auto&&P.rep==="one"){au.currentTime=0;au.play();return}
-var n;if(P.shuf&&L.length>1){do{n=Math.floor(Math.random()*L.length)}while(n===ix)}else{n=ix+1;if(n>=L.length){if(auto&&P.rep!=="all"){au.pause();P.on=false;sv();ui();bus();return}n=0}}playAt(n)}
-function prev(){if(!L.length)return;if(au.currentTime>3){au.currentTime=0;return}if(hist.length){playAt(hist.pop(),true)}else playAt(ix<=0?L.length-1:ix-1,true)}
-function toggle(){if(!L.length)return;if(ix<0||!au.src){playAt(P.last?Math.max(0,L.findIndex(function(m){return m.id===P.last})):0);return}if(au.paused){au.play().then(function(){P.on=true;sv()}).catch(function(){})}else{au.pause();P.on=false;sv()}}
+var n;if(P.shuf&&L.length>1){do{n=Math.floor(Math.random()*L.length)}while(n===ix)}else{n=ix+1;if(n>=L.length){if(auto&&P.rep!=="all"){au.pause();P.on=false;sv();ui();msync();bus();return}n=0}}playAt(n)}
+function prev(){if(!L.length)return;if(au.currentTime>3){au.currentTime=0;return}var h=hist.pop(),j=h==null?-1:L.findIndex(function(m){return m.id===h});if(j>-1)playAt(j,true);else playAt(ix<=0?L.length-1:ix-1,true)}
+function toggle(){if(!L.length)return;if(ix<0||!au.src){var j=P.last?L.findIndex(function(m){return m.id===P.last}):0;playAt(j<0?0:j);return}if(au.paused){au.play().then(function(){P.on=true;sv()}).catch(function(){})}else{au.pause();P.on=false;sv()}}
 au.addEventListener("ended",function(){next(true)});
-au.addEventListener("play",function(){bus();ui(true)});au.addEventListener("pause",function(){bus();ui(true)});
-au.addEventListener("timeupdate",tick);au.addEventListener("loadedmetadata",tick);
-function tick(){if(!shown)return;var s=$("mu-s"),a=$("mu-a"),d=$("mu-d");if(!s)return;a.textContent=fmt(au.currentTime);d.textContent=fmt(au.duration);if(!s.dataset.drag){s.max=isFinite(au.duration)?au.duration:0;s.value=au.currentTime}}
+au.addEventListener("play",function(){ui();msync();bus()});au.addEventListener("pause",function(){ui();msync();bus()});
+au.addEventListener("timeupdate",tick);
+au.addEventListener("loadedmetadata",function(){var m=L[ix];if(m&&!m.dur&&isFinite(au.duration)){m.dur=au.duration;tx("meta","readwrite",function(t){return t.objectStore("meta").put(m)}).catch(function(){})}tick()});
+function tick(){if(mini){var u=mini.querySelector(".bar u");if(u&&au.duration)u.style.width=(au.currentTime/au.duration*100)+"%"}if(!shown)return;var s=$("mu-s"),a=$("mu-a"),d=$("mu-d");if(!s)return;a.textContent=fmt(au.currentTime);d.textContent=fmt(au.duration);if(!s.dataset.drag){s.max=isFinite(au.duration)?au.duration:0;s.value=au.currentTime}}
 function meta(){if(!("mediaSession" in navigator)||ix<0)return;try{navigator.mediaSession.metadata=new MediaMetadata({title:L[ix].name,artist:"ARISE",album:"My Songs"});var h=navigator.mediaSession.setActionHandler.bind(navigator.mediaSession);h("play",function(){toggle()});h("pause",function(){toggle()});h("nexttrack",function(){next()});h("previoustrack",function(){prev()});h("seekto",function(e){if(e.seekTime!=null)au.currentTime=e.seekTime})}catch(e){}}
+/* ---- sleep timer ---- */
+function slLab(){if(!slEnd)return"😴 SLEEP: OFF";return"😴 "+Math.max(1,Math.ceil((slEnd-Date.now())/60000))+" MIN"}
+function slSet(){var o=[0,15,30,60],c=slEnd?Math.round((slEnd-Date.now())/60000):0,k=0;for(var i=0;i<o.length;i++)if(c>o[i]-1)k=i+1;var m=k>=o.length?0:o[k];clearTimeout(slT);clearInterval(slIv);slEnd=0;
+if(m){slEnd=Date.now()+m*60000;slT=setTimeout(function(){var v=au.volume,n=0,iv=setInterval(function(){n++;au.volume=Math.max(0,v*(1-n/12));if(n>=12){clearInterval(iv);au.pause();au.volume=P.vol;P.on=false;sv();slEnd=0;ui()}},300)},m*60000);slIv=setInterval(function(){var b=$("mu-sl");if(b)b.textContent=slLab()},20000)}ui()}
+/* ---- mini player on the main screen ---- */
+function mk(){mini=document.createElement("div");mini.id="mmini";mini.hidden=true;mini.innerHTML='<div class="md"></div><button type="button" class="mt" data-k="open"><b></b><small>MY MUSIC</small></button><button type="button" class="c" data-k="prev" aria-label="Previous">⏮</button><button type="button" class="c pp2" data-k="pp" aria-label="Play or pause">▶</button><button type="button" class="c" data-k="next" aria-label="Next">⏭</button><div class="bar"><u></u></div>';document.body.appendChild(mini);
+mini.addEventListener("click",function(e){var b=e.target.closest("[data-k]");if(!b)return;var k=b.dataset.k;if(k==="pp")toggle();else if(k==="next")next();else if(k==="prev")prev();else open()})}
+function msync(){if(!mini)mk();var c=L[ix],on=!!c;mini.hidden=!on;document.documentElement.classList.toggle("mini",on);if(!on)return;var pl=!au.paused&&!!au.src;mini.querySelector(".mt b").textContent=c.name;mini.querySelector(".pp2").textContent=pl?"⏸":"▶";var d=mini.querySelector(".md");d.classList.toggle("play",pl);d.style.setProperty("--h",hue(c.name))}
 /* ---- sheet UI ---- */
-function ui(soft){if(!shown)return;var tot=L.reduce(function(a,m){return a+(m.size||0)},0),pl=!au.paused&&au.src;
-var cur=L[ix],h='<div class="mu-now"><div class="mu-ti">'+(cur?esc(cur.name):(L.length?"Pick a song":"No songs yet"))+'</div><div class="mu-sub">'+(pl?"NOW PLAYING":cur?"PAUSED":"MY SONGS")+'</div>'+
-'<div class="mu-seek"><span id="mu-a">0:00</span><input id="mu-s" type="range" min="0" max="0" step="0.1" value="0"><span id="mu-d">0:00</span></div>'+
+function ui(){if(!shown)return;var tot=L.reduce(function(a,m){return a+(m.size||0)},0),pl=!au.paused&&!!au.src,cur=L[ix],H=cur?hue(cur.name):320;
+var h='<div class="mu-hero"><div class="mu-disc'+(pl?" play":"")+'" style="--h:'+H+'"><div class="mu-lab"><b>A</b></div></div><div class="mu-eq'+(pl?" on":"")+'"><i></i><i></i><i></i><i></i><i></i></div></div>'+
+'<div class="mu-ti">'+(cur?esc(cur.name):(L.length?"Pick a song":"No songs yet"))+'</div><div class="mu-sub">'+(pl?"NOW PLAYING":cur?"PAUSED":"MY SONGS")+'</div>'+
+'<div class="mu-seek"><span id="mu-a">0:00</span><input id="mu-s" type="range" min="0" max="0" step="0.1" value="0" aria-label="Seek"><span id="mu-d">0:00</span></div>'+
 '<div class="mu-ctl"><button type="button" data-m="shuf" class="'+(P.shuf?"on":"")+'" aria-label="Shuffle">🔀</button><button type="button" data-m="prev" aria-label="Previous">⏮</button><button type="button" data-m="pp" class="pp" aria-label="Play or pause">'+(pl?"⏸":"▶")+'</button><button type="button" data-m="next" aria-label="Next">⏭</button><button type="button" data-m="rep" class="'+(P.rep&&P.rep!=="off"?"on":"")+'" aria-label="Repeat">'+(P.rep==="one"?"🔂":"🔁")+'</button></div>'+
-'<div class="mu-vol"><span>🔈</span><input id="mu-v" type="range" min="0" max="1" step="0.02" value="'+au.volume+'"><span>🔊</span></div></div>'+
+'<div class="mu-ex"><div class="mu-vol"><span>🔈</span><input id="mu-v" type="range" min="0" max="1" step="0.02" value="'+au.volume+'" aria-label="Volume"><span>🔊</span></div><button type="button" class="mu-sl'+(slEnd?" on":"")+'" id="mu-sl" data-m="sl">'+slLab()+'</button></div>'+
 '<button type="button" class="mu-add" data-m="add">➕ ADD SONGS FROM PHONE</button><input id="mu-f" type="file" accept="audio/*,.mp3,.m4a,.aac,.wav,.ogg,.opus,.flac" multiple hidden>'+
-'<div class="mu-info">'+L.length+' SONG'+(L.length==1?"":"S")+' · '+mb(tot)+' SAVED ON THIS PHONE'+(note?' · '+esc(note):'')+'</div>';
-if(!L.length)h+='<div class="mu-empty">Tap “ADD SONGS” and pick as many songs as you like from your phone. They stay saved inside the app.</div>';
-else{L.forEach(function(m,i){h+='<div class="mu-row'+(i===ix?" cur":"")+'"><button type="button" class="pl" data-m="play" data-i="'+i+'"><em>'+(i===ix&&pl?"♪":(i+1))+'</em><span>'+esc(m.name)+'</span></button><small>'+mb(m.size||0)+'</small><button type="button" class="dl" data-m="del" data-id="'+m.id+'" aria-label="Delete">🗑</button></div>'});
-h+='<button type="button" class="mu-clr" data-m="clr">DELETE ALL SONGS</button>'}
-if(soft&&$("mu-s")){/* keep slider/volume untouched while playing */ }
-$("hbb").innerHTML=h;tick()}
-function open(){shown=true;$("hbt").textContent="MY MUSIC";$("hbb").innerHTML="";$("hub").hidden=false;$("hub").scrollTop=0;load().then(function(){ix=cid==null?-1:L.findIndex(function(m){return m.id===cid});ui()})}
-new MutationObserver(function(){if($("hub").hidden)shown=false}).observe($("hub"),{attributes:true,attributeFilter:["hidden"]});
-$("hubg").addEventListener("click",function(e){var b=e.target.closest("button");if(b&&b.dataset.t&&b.dataset.t!=="music")shown=false},true);
+'<button type="button" class="mu-prot" id="mu-p" data-m="prot">…</button>'+
+'<div class="mu-info">'+L.length+' SONG'+(L.length==1?"":"S")+' · '+mb(tot)+' SAVED'+(note?' · '+esc(note):'')+'</div>';
+if(pend)h+='<div class="mu-undo"><span>Removed “'+esc(pend.m.name)+'” · kept 30 days below</span><button type="button" data-m="undo">UNDO</button></div>';
+if(L.length>6)h+='<input class="mu-q" id="mu-q" type="search" placeholder="🔍 Search songs" autocomplete="off">';
+if(!L.length&&!pend)h+='<div class="mu-empty">Tap “ADD SONGS FROM PHONE” and pick as many songs as you like.<br>They are saved inside the app and stay until <b>you</b> delete them.</div>';
+L.forEach(function(m,i){var c=i===ix;h+='<div class="mu-row'+(c?" cur":"")+'" style="--h:'+hue(m.name)+'" data-n="'+esc(m.name.toLowerCase())+'"><button type="button" class="pl" data-m="play" data-i="'+i+'"><span class="n">'+(c&&pl?'<span class="mu-eq on"><i></i><i></i><i></i><i></i></span>':(i+1))+'</span><span class="t">'+esc(m.name)+'</span></button><small>'+(m.dur?fmt(m.dur)+"<br>":"")+mb(m.size||0)+'</small><button type="button" class="dl" data-m="del" data-i="'+i+'" aria-label="Remove">🗑</button></div>'});
+if(T.length){h+='<div class="mu-sec">RECENTLY REMOVED · KEPT 30 DAYS</div>';T.forEach(function(m){h+='<div class="mu-row" style="--h:'+hue(m.name)+'"><button type="button" class="pl"><span class="n">♪</span><span class="t">'+esc(m.name)+'</span></button><small>'+mb(m.size||0)+'</small><button type="button" class="dl rs" data-m="rest" data-id="'+m.id+'" aria-label="Restore">↩</button><button type="button" class="dl" data-m="forever" data-id="'+m.id+'" aria-label="Delete forever">✖</button></div>'})}
+if(L.length)h+='<button type="button" class="mu-clr" data-m="clr">'+(clrArm?"⚠ TAP AGAIN TO REMOVE ALL SONGS":"REMOVE ALL SONGS")+'</button>';
+$("hbb").innerHTML=h;tick();pshow()}
+function open(){shown=true;$("hub").classList.add("mu");$("hbt").textContent="MY MUSIC";$("hbb").innerHTML="";$("hub").hidden=false;$("hub").scrollTop=0;protect(true);load().then(function(){ix=cid==null?-1:L.findIndex(function(m){return m.id===cid});ui()})}
+new MutationObserver(function(){if($("hub").hidden){shown=false;$("hub").classList.remove("mu");clrArm=0}}).observe($("hub"),{attributes:true,attributeFilter:["hidden"]});
+$("hubg").addEventListener("click",function(e){var b=e.target.closest("button");if(b&&b.dataset.t&&b.dataset.t!=="music"){shown=false;$("hub").classList.remove("mu")}},true);
 $("hbb").addEventListener("click",function(e){if(!shown)return;var b=e.target.closest("[data-m]");if(!b)return;var m=b.dataset.m;
 if(m==="pp")toggle();else if(m==="next")next();else if(m==="prev")prev();else if(m==="shuf"){P.shuf=!P.shuf;sv();ui()}
 else if(m==="rep"){P.rep=P.rep==="all"?"one":P.rep==="one"?"off":"all";sv();ui()}
-else if(m==="add")$("mu-f").click();else if(m==="play")playAt(+b.dataset.i);
-else if(m==="del"){var id=+b.dataset.id,was=L[ix]&&L[ix].id===id;del(id).then(function(){if(was){au.pause();au.removeAttribute("src");ix=-1;cid=null}else ix=cid==null?-1:L.findIndex(function(x){return x.id===cid});ui();bus()})}
-else if(m==="clr"){if(confirm("Delete all saved songs?")){au.pause();au.removeAttribute("src");ix=-1;cid=null;P.on=false;sv();Promise.all(L.map(function(x){return del(x.id)})).then(function(){ui();bus()})}}});
-$("hbb").addEventListener("change",function(e){if(!shown)return;if(e.target.id==="mu-f"&&e.target.files.length){addFiles(e.target.files);e.target.value=""}});
-$("hbb").addEventListener("input",function(e){if(!shown)return;if(e.target.id==="mu-v"){au.volume=+e.target.value;P.vol=au.volume;sv()}else if(e.target.id==="mu-s"){e.target.dataset.drag="1";$("mu-a").textContent=fmt(+e.target.value)}});
-$("hbb").addEventListener("change",function(e){if(shown&&e.target.id==="mu-s"){au.currentTime=+e.target.value;delete e.target.dataset.drag}});
+else if(m==="add")$("mu-f").click();else if(m==="play")playAt(+b.dataset.i);else if(m==="del")remove(+b.dataset.i);else if(m==="undo")undo();else if(m==="rest")rest(+b.dataset.id);else if(m==="forever")forever(+b.dataset.id);else if(m==="sl")slSet();
+else if(m==="prot"){protect(true).then(function(p){pst=p;if(!p)note="Browser said no. Install the app or add it to your Home screen, then tap again.";ui()})}
+else if(m==="clr"){if(!clrArm){clrArm=1;ui();setTimeout(function(){clrArm=0;if(shown)ui()},4000)}else{clrArm=0;commit();au.pause();au.removeAttribute("src");ix=-1;cid=null;P.on=false;sv();var all=L.slice();L=[];Promise.all(all.map(function(x){x.del=Date.now();return tx("meta","readwrite",function(t){return t.objectStore("meta").put(x)}).then(function(){T.push(x)})})).then(function(){ui();msync();bus()})}}});
+$("hbb").addEventListener("change",function(e){if(!shown)return;if(e.target.id==="mu-f"&&e.target.files.length){addFiles(e.target.files);e.target.value=""}else if(e.target.id==="mu-s"){au.currentTime=+e.target.value;delete e.target.dataset.drag}});
+$("hbb").addEventListener("input",function(e){if(!shown)return;if(e.target.id==="mu-v"){au.volume=+e.target.value;P.vol=au.volume;sv()}else if(e.target.id==="mu-s"){e.target.dataset.drag="1";$("mu-a").textContent=fmt(+e.target.value)}
+else if(e.target.id==="mu-q"){var q=e.target.value.trim().toLowerCase();$("hbb").querySelectorAll(".mu-row").forEach(function(r){r.classList.toggle("hid",!!q&&r.dataset.n.indexOf(q)<0)})}});
 window.ariseMusic={open:open,playing:function(){return !!au.src&&!au.paused}};
-/* resume the last song after the intro if it was playing when the app was closed */
-function resume(){if(!P.on)return;load().then(function(){if(!L.length||au.src)return;var i=P.last?L.findIndex(function(m){return m.id===P.last}):0;playAt(i<0?0:i).catch(function(){})})}
-var cut=$("cut"),ent=0;document.addEventListener("arise-enter",function(){ent=1;setTimeout(function(){if(cut.hidden)resume()},4500)});
+/* come back to the last song after the intro if it was playing */
+function resume(){if(!P.on)return;load().then(function(){if(!L.length||au.src)return;var i=P.last?L.findIndex(function(m){return m.id===P.last}):0;playAt(i<0?0:i)})}
+var cut=$("cut"),ent=0;
+load().then(function(){var i=P.last?L.findIndex(function(m){return m.id===P.last}):-1;if(i>-1&&!P.on){ix=i;cid=L[i].id;msync()}});
+document.addEventListener("arise-enter",function(){ent=1;protect(true);setTimeout(function(){if(cut.hidden)resume()},4500)});
 new MutationObserver(function(){if(ent&&cut.hidden)resume()}).observe(cut,{attributes:true,attributeFilter:["hidden"]});
+})();
+</script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},mods=$("mods"),sd=$("sDone");
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function jp(k,d){try{var x=JSON.parse(ls(k));return x==null?d:x}catch(e){return d}}
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function sfx(n){window.ariseSfx&&window.ariseSfx[n]&&window.ariseSfx[n]()}
+function sheet(t,h){var m=$("hub");m.classList.remove("mu");$("hbt").textContent=t;$("hbb").innerHTML=h;m.hidden=false;m.scrollTop=0}
+function done(){var m=(sd.textContent||"").match(/(\d+)/);return m?+m[1]:0}
+/* ===== 1) skill detail pages + own video links ===== */
+var VL=jp("arise_vl",{});
+function ex(n){return mods.querySelector('.ex[data-n="'+n+'"]')}
+function links(){mods.querySelectorAll(".ex").forEach(function(li){var a=li.querySelector(".vid");if(!a)return;if(!a.dataset.orig)a.dataset.orig=a.href;var u=VL[li.dataset.n];a.href=u||a.dataset.orig;a.classList.toggle("mine",!!u)})}
+mods.querySelectorAll(".ex").forEach(function(li){var nm=li.querySelector(".nm");if(!nm||nm.querySelector(".inf"))return;var b=document.createElement("button");b.type="button";b.className="inf";b.textContent="i";b.setAttribute("aria-label","Details");b.dataset.n=li.dataset.n;nm.appendChild(b)});
+links();
+var SAFE={LEGS:"Warm up first. Move slowly. A stretch is fine, sharp pain is not. Keep your knees soft and never lock the joints.",SPINE:"Move slowly and never force the pose. Stop at once if you feel sharp pain, numbness or tingling in your arms or legs. If you have a disc problem, an injury or had surgery, ask your doctor before you start.",HAIR:"Avoid head-down positions if you have high blood pressure, dizziness, neck problems or eye-pressure problems. Be gentle on the scalp, and skip oils or massage on irritated or broken skin."};
+function detail(n){var li=ex(n);if(!li)return;var sec=li.closest(".mod"),g=sec.dataset.g||"",tt=sec.querySelector(".tt b"),sb=sec.querySelector(".tt span"),en=li.querySelector(".en").textContent.replace(/^\d+\.\s*/,""),bn=(li.querySelector(".bn")||{}).textContent||"",ok=li.classList.contains("done"),hold=+ls("arise_hold")||45,orig=li.querySelector(".vid").dataset.orig||li.querySelector(".vid").href,my=VL[n]||"";
+var all=[].slice.call(mods.querySelectorAll(".ex")),pos=all.indexOf(li);
+var h='<div class="dt-h"><span class="g">'+esc(g)+'</span><span>'+esc(tt?tt.textContent:"")+'</span><span>'+esc(sb?sb.textContent:"")+'</span><span>'+(ok?"✔ DONE":"NOT DONE")+'</span></div>'+(bn?'<p class="dt-bn">'+esc(bn)+'</p>':"")+
+'<div class="dt-b"><h4>HOW TO PRACTISE</h4>Breathe slowly through the nose. Hold for about '+hold+' seconds (change this in the guided session). Come out slowly and stop if anything hurts.</div>'+
+'<div class="dt-b w"><h4>SAFETY</h4>'+(SAFE[g]||"Go gently and stop if anything hurts.")+'<br><small>This app is a self-care guide, not medical advice.</small></div>'+
+'<div class="dt-b"><h4>MY VIDEO LINK</h4>Paste your own video link (YouTube or any web link). The ▶ button on this skill will open it.<input id="dt-u" type="url" inputmode="url" placeholder="https://..." value="'+esc(my)+'"><div class="dt-r"><button type="button" class="pk" data-d="save">SAVE LINK</button><button type="button" data-d="clr">USE DEFAULT</button></div></div>'+
+'<div class="dt-r"><button type="button" data-d="vid">▶ OPEN VIDEO</button><button type="button" data-d="note">📝 NOTE</button><button type="button" data-d="done" class="'+(ok?"":"pk")+'">'+(ok?"MARK NOT DONE":"✔ MARK DONE")+'</button></div>'+
+'<div class="dt-r" style="margin-top:8px"><button type="button" data-d="prev">‹ PREVIOUS</button><button type="button" data-d="next">NEXT ›</button></div>';
+sheet(en,h);var box=$("hbb");box.dataset.dn=n;box.dataset.dp=pos}
+mods.addEventListener("click",function(e){var b=e.target.closest(".inf");if(!b)return;e.stopPropagation();sfx("tick");detail(b.dataset.n)},true);
+$("hbb").addEventListener("click",function(e){var b=e.target.closest("[data-d]");if(!b)return;var box=$("hbb"),n=+box.dataset.dn;if(!n)return;var k=b.dataset.d,li=ex(n),all=[].slice.call(mods.querySelectorAll(".ex")),pos=all.indexOf(li);
+if(k==="save"){var u=$("dt-u").value.trim();if(!/^https?:\/\/\S+$/i.test(u)){b.textContent="NOT A VALID LINK";return}VL[n]=u;ls("arise_vl",JSON.stringify(VL));links();b.textContent="✔ SAVED";sfx("chime")}
+else if(k==="clr"){delete VL[n];ls("arise_vl",JSON.stringify(VL));links();$("dt-u").value="";b.textContent="✔ DEFAULT"}
+else if(k==="vid"){var a=li.querySelector(".vid");window.open(a.href,"_blank","noopener")}
+else if(k==="note"){$("hub").hidden=true;var nt=li.querySelector(".nt");if(nt)setTimeout(function(){nt.click()},120)}
+else if(k==="done"){li.querySelector(".chk").click();setTimeout(function(){detail(n)},120)}
+else if(k==="next"||k==="prev"){var t=all[pos+(k==="next"?1:-1)];if(t)detail(+t.dataset.n)}});
+/* ===== 2) safe data: backup, restore, protection ===== */
+function keys(){var o={};try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k==="combatos-done-v1"||k.indexOf("arise_")===0)o[k]=localStorage.getItem(k)}}catch(e){}return o}
+function overdue(){var t=+ls("arise_lastbk")||0;if(!t)return done()>0;return Date.now()-t>7*864e5}
+function ago(t){if(!t)return"NEVER";var d=Math.floor((Date.now()-t)/864e5);return d<=0?"TODAY":d===1?"YESTERDAY":d+" DAYS AGO"}
+function safeUI(){var t=+ls("arise_lastbk")||0,od=overdue();sheet("SAFE DATA",'<div class="dt-b'+(od?" w":"")+'"><h4>LAST BACKUP</h4>'+ago(t)+(od?" · time to save a copy":"")+'</div><div class="sf-r"><span>PROGRESS SAVED</span><b>'+done()+' / 92 SKILLS</b></div><div class="sf-r"><span>PHONE PROTECTION</span><b id="sf-p">checking…</b></div><div class="sf-r"><span>STORAGE USED</span><b id="sf-s">…</b></div>'+
+'<div class="dt-r" style="margin-top:12px"><button type="button" class="pk" data-s="bk">💾 SAVE BACKUP FILE</button><button type="button" data-s="rs">📥 RESTORE</button></div><input id="sf-f" type="file" accept="application/json,.json" hidden>'+
+'<div class="dt-b" style="margin-top:12px"><h4>WHAT IS IN THE FILE</h4>Your skills, level, coins, shop, notes, trackers, routine, profile and settings. Songs are not inside the file. They stay protected on this phone (see My Music).</div>'+
+'<div class="dt-b"><h4>TIP</h4>Save a backup once a week and keep the file in Google Drive or WhatsApp. If you change your phone, install the app and tap RESTORE.</div>');
+if(navigator.storage&&navigator.storage.persisted)navigator.storage.persisted().then(function(p){var e=$("sf-p");if(e)e.textContent=p?"🔒 ON":"⚠ OFF (add app to Home screen)"});else{var e=$("sf-p");if(e)e.textContent="not supported"}
+if(navigator.storage&&navigator.storage.estimate)navigator.storage.estimate().then(function(r){var e=$("sf-s");if(e)e.textContent=(r.usage/1048576).toFixed(1)+" MB of "+(r.quota/1073741824).toFixed(1)+" GB"})}
+$("hbb").addEventListener("click",function(e){var b=e.target.closest("[data-s]");if(!b)return;var k=b.dataset.s;
+if(k==="bk"){var o={app:"arise",v:2,t:Date.now(),data:keys()},f=new File([JSON.stringify(o)],"arise-backup-"+new Date().toISOString().slice(0,10)+".json",{type:"application/json"});
+function dl(){var a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();setTimeout(function(){a.remove();URL.revokeObjectURL(a.href)},800)}
+ls("arise_lastbk",String(Date.now()));if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:"Arise backup"}).catch(dl);else dl();document.dispatchEvent(new Event("arise-music"));sfx("chime");setTimeout(safeUI,400)}
+else if(k==="rs"){$("sf-f").click()}});
+$("hbb").addEventListener("change",function(e){if(e.target.id!=="sf-f")return;var f=e.target.files&&e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var o=JSON.parse(r.result);if(o.app!=="arise"||!o.data)throw 0;if(!confirm("Restore this backup? Current progress on this phone will be replaced."))return;Object.keys(o.data).forEach(function(k){if(k==="combatos-done-v1"||k.indexOf("arise_")===0)ls(k,String(o.data[k]))});location.reload()}catch(x){var b=$("hbb").querySelector('[data-s="rs"]');if(b)b.textContent="✖ INVALID FILE"}};r.readAsText(f);e.target.value=""});
+window.ariseSafe={open:safeUI,overdue:overdue};
+/* ===== 3) lite mode (auto-detects a slow phone) ===== */
+var H=document.documentElement,lb=$("litb"),mode=ls("arise_lite");
+function lite(on){H.classList.toggle("lite",on);lb.classList.toggle("act",on);lb.textContent="⚡ LITE MODE: "+(on?"ON":"OFF")}
+lite(mode==="1"||mode==="a1");
+lb.addEventListener("click",function(){var on=!H.classList.contains("lite");ls("arise_lite",on?"1":"0");lite(on);sfx("tick")});
+document.addEventListener("arise-enter",function(){if(!H.classList.contains("lite"))return;var n=0,iv=setInterval(function(){var c=$("cut");if(c&&!c.hidden)$("skip").click();if(++n>22)clearInterval(iv)},350)});
+if(mode===null){var cut=$("cut"),armed=0;function test(){if(armed)return;armed=1;var f=0,t0=0,end=0;function loop(t){if(!t0){t0=t;end=t+2500}f++;if(t<end)requestAnimationFrame(loop);else{var fps=f/((t-t0)/1000);if(fps<38){ls("arise_lite","a1");lite(true)}else ls("arise_lite","a0")}}requestAnimationFrame(loop)}
+new MutationObserver(function(){if(cut.hidden)setTimeout(test,1500)}).observe(cut,{attributes:true,attributeFilter:["hidden"]})}
+document.dispatchEvent(new Event("arise-music"));
 })();
 </script>
 </body></html>
