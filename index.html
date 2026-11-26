@@ -609,7 +609,7 @@ html.lite *,html.lite *::before,html.lite *::after{animation:none!important;tran
 html.lite::after,html.lite .aura,html.lite .shock,html.lite .flare{display:none!important}
 html.lite .scene svg{will-change:auto}
 #litb.act{background:linear-gradient(90deg,#a6e22e,#3cc8ff);color:#04121f;border-color:transparent}
-</style><style id="arise-fix">.mu-sec{font:700 11px Rajdhani,sans-serif;letter-spacing:.3em;color:#c6b3ff;margin:16px 0 6px}.mu-row .rs{color:#8fe6ff}</style></head><body>
+</style><style id="arise-fix">.mu-sec{font:700 11px Rajdhani,sans-serif;letter-spacing:.3em;color:#c6b3ff;margin:16px 0 6px}.mu-row .rs{color:#8fe6ff}</style><style id="arise-open">.mu-row .ro{opacity:.35;font-size:16px}.mu-row .ro.on{opacity:1;filter:drop-shadow(0 0 6px #ff9a3c)}.mu-open{margin:8px 0;padding:8px 10px;border:1px solid rgba(255,154,60,.45);background:rgba(255,154,60,.08);border-radius:6px;font:700 12px/1.4 Rajdhani,sans-serif;letter-spacing:.06em;color:#ffd9a0}.mu-open b{color:#fff}</style></head><body>
 <div id="cut" hidden aria-hidden="true"><div class="nmx"><i class="fl2"></i><small>PLAYER</small><h3 data-t="SUBHAJIT">SUBHAJIT</h3><span>THE HUNTER AWAKENS</span><i class="swp"></i></div><div class="cs" id="cs">
 <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
 <defs><radialGradient id="gv"><stop offset="0" stop-color="#8a5cff" stop-opacity=".75"/><stop offset="1" stop-color="#8a5cff" stop-opacity="0"/></radialGradient>
@@ -1331,7 +1331,7 @@ function mb(n){return n>=1048576?(n/1048576).toFixed(1)+" MB":Math.max(1,Math.ro
 function hue(n){var h=0;for(var i=0;i<n.length;i++)h=(h*31+n.charCodeAt(i))%360;return h}
 var P={};try{P=JSON.parse(ls("arise_mus")||"{}")||{}}catch(e){P={}}
 function sv(){ls("arise_mus",JSON.stringify(P))}
-if(P.vol==null)P.vol=.8;au.volume=P.vol;
+if(P.vol==null)P.vol=.8;au.volume=P.vol;if(P.intro&&!P.openq)P.openq=[P.intro];
 /* ---- IndexedDB: songs live inside the app on this phone ---- */
 var DB=null;function db(){return DB||(DB=new Promise(function(res,rej){if(!window.indexedDB)return rej(new Error("no idb"));var r=indexedDB.open("arise-music",1);r.onupgradeneeded=function(){var d=r.result;d.createObjectStore("meta",{keyPath:"id",autoIncrement:true});d.createObjectStore("blob")};r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)}}))}
 function tx(st,mode,fn){return db().then(function(d){return new Promise(function(res,rej){var t=d.transaction(st,mode),o=fn(t);t.oncomplete=function(){res(o&&"result" in o?o.result:o)};t.onerror=t.onabort=function(){rej(t.error||new Error("storage error"))}})})}
@@ -1353,10 +1353,11 @@ function undo(){if(!pend)return;clearTimeout(pend.t);var m=pend.m;pend=null;L.pu
 function remove(i){var m=L[i];if(!m)return;commit();var was=m.id===cid;L.splice(i,1);if(was){au.pause();au.removeAttribute("src");cid=null;ix=-1;P.on=false;sv()}else ix=cid==null?-1:L.findIndex(function(x){return x.id===cid});
 pend={m:m,t:setTimeout(commit,7000)};ui();msync();bus()}
 /* ---- playback ---- */
-function playAt(i,fromHist){if(!L.length)return Promise.resolve();if(i<0)i=L.length-1;if(i>=L.length)i=0;if(!fromHist&&ix>=0&&ix!==i){hist.push(cid);if(hist.length>60)hist.shift()}
+var openRun=false,oqi=0;
+function playAt(i,fromHist){openRun=false;if(!L.length)return Promise.resolve();if(i<0)i=L.length-1;if(i>=L.length)i=0;if(!fromHist&&ix>=0&&ix!==i){hist.push(cid);if(hist.length>60)hist.shift()}
 ix=i;var m=L[i];cid=m.id;P.last=m.id;P.on=true;sv();
 return tx("blob","readonly",function(t){return t.objectStore("blob").get(m.id)}).then(function(b){if(!b)throw 0;if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(b);au.src=url;return au.play()}).then(function(){meta();ui();msync();bus()}).catch(function(){note="Could not play “"+m.name+"”";ui()})}
-function next(auto){if(!L.length)return;if(auto&&P.rep==="one"){au.currentTime=0;au.play();return}
+function next(auto){if(!L.length)return;if(openRun){var ids=openIds();oqi++;if(oqi<ids.length){playOpen(oqi).catch(function(){})}else{openRun=false;au.pause();P.on=false;sv();ui();msync();bus()}return}if(auto&&P.rep==="one"){au.currentTime=0;au.play();return}
 var n;if(P.shuf&&L.length>1){do{n=Math.floor(Math.random()*L.length)}while(n===ix)}else{n=ix+1;if(n>=L.length){if(auto&&P.rep!=="all"){au.pause();P.on=false;sv();ui();msync();bus();return}n=0}}playAt(n)}
 function prev(){if(!L.length)return;if(au.currentTime>3){au.currentTime=0;return}var h=hist.pop(),j=h==null?-1:L.findIndex(function(m){return m.id===h});if(j>-1)playAt(j,true);else playAt(ix<=0?L.length-1:ix-1,true)}
 function toggle(){if(!L.length)return;if(ix<0||!au.src){var j=P.last?L.findIndex(function(m){return m.id===P.last}):0;playAt(j<0?0:j);return}if(au.paused){au.play().then(function(){P.on=true;sv()}).catch(function(){})}else{au.pause();P.on=false;sv()}}
@@ -1382,12 +1383,12 @@ var h='<div class="mu-hero"><div class="mu-disc'+(pl?" play":"")+'" style="--h:'
 '<div class="mu-ctl"><button type="button" data-m="shuf" class="'+(P.shuf?"on":"")+'" aria-label="Shuffle">🔀</button><button type="button" data-m="prev" aria-label="Previous">⏮</button><button type="button" data-m="pp" class="pp" aria-label="Play or pause">'+(pl?"⏸":"▶")+'</button><button type="button" data-m="next" aria-label="Next">⏭</button><button type="button" data-m="rep" class="'+(P.rep&&P.rep!=="off"?"on":"")+'" aria-label="Repeat">'+(P.rep==="one"?"🔂":"🔁")+'</button></div>'+
 '<div class="mu-ex"><div class="mu-vol"><span>🔈</span><input id="mu-v" type="range" min="0" max="1" step="0.02" value="'+au.volume+'" aria-label="Volume"><span>🔊</span></div><button type="button" class="mu-sl'+(slEnd?" on":"")+'" id="mu-sl" data-m="sl">'+slLab()+'</button></div>'+
 '<button type="button" class="mu-add" data-m="add">➕ ADD SONGS FROM PHONE</button><input id="mu-f" type="file" accept="audio/*,.mp3,.m4a,.aac,.wav,.ogg,.opus,.flac" multiple hidden>'+
-'<button type="button" class="mu-prot" id="mu-p" data-m="prot">…</button>'+
+'<button type="button" class="mu-prot" id="mu-p" data-m="prot">…</button>'+'<div class="mu-open">'+openInfo()+'</div>'+
 '<div class="mu-info">'+L.length+' SONG'+(L.length==1?"":"S")+' · '+mb(tot)+' SAVED'+(note?' · '+esc(note):'')+'</div>';
 if(pend)h+='<div class="mu-undo"><span>Removed “'+esc(pend.m.name)+'” · kept 30 days below</span><button type="button" data-m="undo">UNDO</button></div>';
 if(L.length>6)h+='<input class="mu-q" id="mu-q" type="search" placeholder="🔍 Search songs" autocomplete="off">';
 if(!L.length&&!pend)h+='<div class="mu-empty">Tap “ADD SONGS FROM PHONE” and pick as many songs as you like.<br>They are saved inside the app and stay until <b>you</b> delete them.</div>';
-L.forEach(function(m,i){var c=i===ix;h+='<div class="mu-row'+(c?" cur":"")+'" style="--h:'+hue(m.name)+'" data-n="'+esc(m.name.toLowerCase())+'"><button type="button" class="pl" data-m="play" data-i="'+i+'"><span class="n">'+(c&&pl?'<span class="mu-eq on"><i></i><i></i><i></i><i></i></span>':(i+1))+'</span><span class="t">'+esc(m.name)+'</span></button><small>'+(m.dur?fmt(m.dur)+"<br>":"")+mb(m.size||0)+'</small><button type="button" class="dl" data-m="del" data-i="'+i+'" aria-label="Remove">🗑</button></div>'});
+L.forEach(function(m,i){var c=i===ix;h+='<div class="mu-row'+(c?" cur":"")+'" style="--h:'+hue(m.name)+'" data-n="'+esc(m.name.toLowerCase())+'"><button type="button" class="pl" data-m="play" data-i="'+i+'"><span class="n">'+(c&&pl?'<span class="mu-eq on"><i></i><i></i><i></i><i></i></span>':(i+1))+'</span><span class="t">'+esc(m.name)+'</span></button><small>'+(m.dur?fmt(m.dur)+"<br>":"")+mb(m.size||0)+'</small><button type="button" class="dl ro'+((P.openq||[]).indexOf(m.id)>-1?" on":"")+'" data-m="intro" data-i="'+i+'" aria-label="Play when the app opens">🚀'+((P.openq||[]).indexOf(m.id)>-1?(P.openq.indexOf(m.id)+1):"")+'</button><button type="button" class="dl" data-m="del" data-i="'+i+'" aria-label="Remove">🗑</button></div>'});
 if(T.length){h+='<div class="mu-sec">RECENTLY REMOVED · KEPT 30 DAYS</div>';T.forEach(function(m){h+='<div class="mu-row" style="--h:'+hue(m.name)+'"><button type="button" class="pl"><span class="n">♪</span><span class="t">'+esc(m.name)+'</span></button><small>'+mb(m.size||0)+'</small><button type="button" class="dl rs" data-m="rest" data-id="'+m.id+'" aria-label="Restore">↩</button><button type="button" class="dl" data-m="forever" data-id="'+m.id+'" aria-label="Delete forever">✖</button></div>'})}
 if(L.length)h+='<button type="button" class="mu-clr" data-m="clr">'+(clrArm?"⚠ TAP AGAIN TO REMOVE ALL SONGS":"REMOVE ALL SONGS")+'</button>';
 $("hbb").innerHTML=h;tick();pshow()}
@@ -1397,13 +1398,23 @@ $("hubg").addEventListener("click",function(e){var b=e.target.closest("button");
 $("hbb").addEventListener("click",function(e){if(!shown)return;var b=e.target.closest("[data-m]");if(!b)return;var m=b.dataset.m;
 if(m==="pp")toggle();else if(m==="next")next();else if(m==="prev")prev();else if(m==="shuf"){P.shuf=!P.shuf;sv();ui()}
 else if(m==="rep"){P.rep=P.rep==="all"?"one":P.rep==="one"?"off":"all";sv();ui()}
-else if(m==="add")$("mu-f").click();else if(m==="play")playAt(+b.dataset.i);else if(m==="del")remove(+b.dataset.i);else if(m==="undo")undo();else if(m==="rest")rest(+b.dataset.id);else if(m==="forever")forever(+b.dataset.id);else if(m==="sl")slSet();
+else if(m==="add")$("mu-f").click();else if(m==="play")playAt(+b.dataset.i);else if(m==="del")remove(+b.dataset.i);else if(m==="undo")undo();else if(m==="intro"){var q=L[+b.dataset.i];if(q){var a=P.openq||[],k=a.indexOf(q.id);if(k>-1)a.splice(k,1);else a.push(q.id);P.openq=a;P.intro=a[0]||null;sv();ui()}}else if(m==="rest")rest(+b.dataset.id);else if(m==="forever")forever(+b.dataset.id);else if(m==="sl")slSet();
 else if(m==="prot"){protect(true).then(function(p){pst=p;if(!p)note="Browser said no. Install the app or add it to your Home screen, then tap again.";ui()})}
 else if(m==="clr"){if(!clrArm){clrArm=1;ui();setTimeout(function(){clrArm=0;if(shown)ui()},4000)}else{clrArm=0;commit();au.pause();au.removeAttribute("src");ix=-1;cid=null;P.on=false;sv();var all=L.slice();L=[];Promise.all(all.map(function(x){x.del=Date.now();return tx("meta","readwrite",function(t){return t.objectStore("meta").put(x)}).then(function(){T.push(x)})})).then(function(){ui();msync();bus()})}}});
 $("hbb").addEventListener("change",function(e){if(!shown)return;if(e.target.id==="mu-f"&&e.target.files.length){addFiles(e.target.files);e.target.value=""}else if(e.target.id==="mu-s"){au.currentTime=+e.target.value;delete e.target.dataset.drag}});
 $("hbb").addEventListener("input",function(e){if(!shown)return;if(e.target.id==="mu-v"){au.volume=+e.target.value;P.vol=au.volume;sv()}else if(e.target.id==="mu-s"){e.target.dataset.drag="1";$("mu-a").textContent=fmt(+e.target.value)}
 else if(e.target.id==="mu-q"){var q=e.target.value.trim().toLowerCase();$("hbb").querySelectorAll(".mu-row").forEach(function(r){r.classList.toggle("hid",!!q&&r.dataset.n.indexOf(q)<0)})}});
 window.ariseMusic={open:open,playing:function(){return !!au.src&&!au.paused}};
+/* ---- open song: starts with the ARISE screen ---- */
+var introDone=0;
+function openIds(){return (P.openq||[]).filter(function(id){return L.some(function(m){return m.id===id})})}
+function openInfo(){var ids=openIds();if(!ids.length)return'🚀 Tap the rocket on songs to choose what plays when the app opens. The first one you tap plays first.';return'🚀 WHEN THE APP OPENS: '+ids.map(function(id,i){var m=L.filter(function(x){return x.id===id})[0];return(i+1)+') <b>'+esc(m.name)+'</b>'}).join(' → ')+' · then the music stops'}
+function playOpen(k){var ids=openIds();if(k>=ids.length)return Promise.resolve();var id=ids[k],j=L.findIndex(function(m){return m.id===id});ix=j;cid=id;P.last=id;P.on=true;sv();
+return tx("blob","readonly",function(t){return t.objectStore("blob").get(id)}).then(function(b){if(!b)throw 0;if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(b);au.src=url;au.currentTime=0;return au.play()}).then(function(){meta();msync();bus();if(shown)ui()})}
+function introGo(){if(introDone||!openIds().length)return;introDone=1;openRun=true;oqi=0;playOpen(0).catch(function(){introDone=0;openRun=false;msync()})}
+load().then(introGo);
+var sp0=$("splash");if(sp0)sp0.addEventListener("pointerdown",function(){if(L.length)introGo();else load().then(introGo)},true);
+document.addEventListener("arise-enter",function(){if(L.length)introGo();else load().then(introGo)});
 /* come back to the last song after the intro if it was playing */
 function resume(){if(!P.on)return;load().then(function(){if(!L.length||au.src)return;var i=P.last?L.findIndex(function(m){return m.id===P.last}):0;playAt(i<0?0:i)})}
 var cut=$("cut"),ent=0;
